@@ -1,24 +1,22 @@
-# README
+# <プラントベースkitchen>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+*プラントベースの料理をメインに、レシピを投稿したり閲覧できるSNSアプリプラントベースの料理をメインに、レシピを投稿したり閲覧できるSNSアプリ
 
-Things you may want to cover:
+### テーマを選んだ理由
+*日本でもプラントベースの食材がより身近になってきましたが、気になるけど調理方法がわからなかったり、挑戦したいけど何から始めたら良いかわからないという人も多いと思います。
+プラントベースの食材を日常的に取り入れている人と、興味があって調理方法を知りたい！という人たちが気軽に情報交換できるレシピサイトがあったら、食の選択肢を広げる手助けになると思い今回のテーマに選びました。
+※プラントベースとは植物由来の食べ物を中心とした食事法のことです。近年では健康志向や環境保全の意識の高まりから、プラントベースの食事法を取り入れる人が増えています。
 
-* Ruby version
+### ターゲットユーザ
+*20代以上のプラントベースの食材や料理に興味のある方
 
-* System dependencies
+## チャレンジ要素一覧
+<https://docs.google.com/spreadsheets/d/1pc_5V9Kh1p49PnkzoqTVYlhR1vUQ3XFpAaPklxOtDik/edit#gid=2040921964>
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
