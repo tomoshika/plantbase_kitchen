@@ -18,8 +18,8 @@
 <https://docs.google.com/spreadsheets/d/1pc_5V9Kh1p49PnkzoqTVYlhR1vUQ3XFpAaPklxOtDik/edit#gid=2040921964>
 
 ## 開発環境
-- OS：Linux(CentOS)
-- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- OS：Linux2
+- 言語：HTML,CSS,JavaScript,Ruby
 - フレームワーク：Ruby on Rails
-- JSライブラリ：jQuery
+- JSライブラリ：Bootstrap
 - IDE：Cloud9
