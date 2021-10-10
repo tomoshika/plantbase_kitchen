@@ -1,26 +1,51 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-8">
+    <div class="col-sm-12 col-md-8 col-lg-6 px-sm-0 mx-auto">
       <h2>レシピ新規投稿</h2>
       <div class="recipe-post">
         <%= form_with(model: @recipe, local: true) do |f| %>
-          <div class="foods">
-            <div class="mx-auto">
-              <%= f.fields_for :foods do |t| %>
-                <%= render "recipes/food_fields", f: t %>
-              <% end %>
-            </div>
-            <div id="detail-association-insertion-point"></div>
-            <div class="col-10 mx-auto mt-2">
-              <%= link_to_add_association "+フォームを追加", f, :foods,
+          <div class="form-group">
+            <%= f.label :image, "料理イメージ写真" %></br>
+            <%= f.attachment_field :image, class: "form-control-file" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :title, "タイトル" %></br>
+            <%= f.text_field :title, class: "form-control"%>
+          </div>
+          <div class="form-group">
+            <%= f.label :memo, "メモ" %></br>
+            <%= f.text_area :memo, class: "form-control" %>
+          </div>
+          <div class="row form-group">
+            <%= f.fields_for :foods do |t| %>
+              <%= render "recipes/food_fields", f: t %>
+            <% end %>
+            <div id="detail-association-insertion-point-foods"></div>
+            <div class="float-right mt-2">
+              <%= link_to_add_association "＋追加", f, :foods,
               class: "btn btn-secondary btn-block",
               data: {
-              association_insertion_node: '#detail-association-insertion-point',
+              association_insertion_node: '#detail-association-insertion-point-foods',
               association_insertion_method: 'after'
               }%>
             </div>
+          </div>
+          <div class="row form-group">
+            <%= f.fields_for :steps do |t| %>
+              <%= render "recipes/step_fields", f: t %>
+            <% end %>
+            <div id="detail-association-insertion-point-steps"></div>
+            <div class="float-right mt-2">
+              <%= link_to_add_association "＋追加", f, :steps,
+              class: "btn btn-secondary btn-block",
+              data: {
+              association_insertion_node: '#detail-association-insertion-point-steps',
+              association_insertion_method: 'after'
+              }%>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.submit "投稿する", class: "btn btn-secondary" %>
           </div>
         <% end %>
       </div>

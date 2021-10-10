@@ -3,10 +3,31 @@
     <div class="col-md-4">
     </div>
     <div class="col-md-8">
-      <tr><%= @recipe.title %></tr>
-      <%= attachment_image_tag @recipe, :image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
-      <%= @recipe.memo %>
-      <%= @recipe.recipe %>
+      <div class="row">
+        <div class="col-5">
+          <%= attachment_image_tag @recipe, :image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
+        </div>
+        <div class="col-7">
+          <h3><%= @recipe.title %></h3>
+          <div><%= @recipe.memo %></div>
+          <div>材料</div>
+          <% @foods.each do |food| %>
+            <div><%= food.items %></div>
+            <div><%= food.quantity %></div>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div>作り方</div>
+          <% @steps.each do |step| %>
+            <div><%= step.process %></div>
+            <div><%= step.process_image %></div>
+          <% end %>
+      </div>
+      
+      
+      
+      
 
     </div>
   </div>

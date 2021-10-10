@@ -1,0 +1,11 @@
+<div class="nested-fields">
+  <div class="row mx-auto mb-1">
+    <div class="col-10">
+      <%= f.text_field :process, class: "form-control", placeholder: "手順" %></br>
+      <%= f.attachment_field :process_image, class: "form-control-file" %>
+    </div>
+    <div class="col-1">
+      <%= link_to_remove_association "", f, class: "fas fa-trash-alt btn btn-block" %>
+    </div>
+  </div>
+</div>
