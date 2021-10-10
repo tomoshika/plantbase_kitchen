@@ -1,2 +1,30 @@
-<h1>Recipes#new</h1>
-<p>Find me in app/views/recipes/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
+      <h2>レシピ新規投稿</h2>
+      <div class="recipe-post">
+        <%= form_with(model: @recipe, local: true) do |f| %>
+          <div class="foods">
+            <div class="mx-auto">
+              <%= f.fields_for :foods do |t| %>
+                <%= render "recipes/food_fields", f: t %>
+              <% end %>
+            </div>
+            <div id="detail-association-insertion-point"></div>
+            <div class="col-10 mx-auto mt-2">
+              <%= link_to_add_association "+フォームを追加", f, :foods,
+              class: "btn btn-secondary btn-block",
+              data: {
+              association_insertion_node: '#detail-association-insertion-point',
+              association_insertion_method: 'after'
+              }%>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+　</div>
+</div>
+

@@ -1,2 +1,13 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
+      <tr><%= @recipe.title %></tr>
+      <%= attachment_image_tag @recipe, :image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
+      <%= @recipe.memo %>
+      <%= @recipe.recipe %>
+
+    </div>
+  </div>
+</div>
