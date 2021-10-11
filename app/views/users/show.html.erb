@@ -1,22 +1,26 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-4">
+  <div class="row mx-auto mt-3">
+    <div class="col-md-4 offset-2">
       <table>
-        <%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
+        <%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", size: "200x150" %>
         <tbody>
           <tr>
-            <th>name</th>
-            <td><%= @user.name %></td>
+            <th><%= @user.name %></th>
           </tr>
           <tr>
-            <th>introduction</th>
             <td><%= @user.introduction %></td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="col-md-8">
-      <h2>ここにindexをrenderする</h2>    
+    <div class="col-md-4 pt-5">
+      <% if @user == current_user %>
+        <%= link_to 'レシピを投稿する', new_recipe_path, class: "btn btn-secondary" %></br>
+        <%= link_to 'アカウント情報編集', edit_user_path(@user), class: "btn btn-secondary mt-1" %>
+      <% end %>
     </div>
+　</div>
+　<div class="row mx-auto mt-3">
+　  <%= render "recipes/index", recipes: @recipes %>
 　</div>
 </div>

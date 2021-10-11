@@ -1,33 +1,41 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-8">
+  <div class="row mt-3">
+    <div class="col-md-10 mx-auto">
       <div class="row">
         <div class="col-5">
-          <%= attachment_image_tag @recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
+          <%= attachment_image_tag @recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", size: "300x300" %>
+          <% if @recipe.user == current_user %>
+            <%= link_to 'レシピを編集する', edit_recipe_path(@recipe), class: "btn btn-secondary mt-2 offset-2" %></br>
+            <%= link_to 'レシピを削除する', recipe_path(@recipe.id), method: :delete, class: "btn btn-secondary mt-1 offset-2" %>
+          <% end %>
         </div>
         <div class="col-7">
           <h3><%= @recipe.title %></h3>
           <div><%= @recipe.memo %></div>
-          <div>材料</div>
-          <% @foods.each do |food| %>
-            <div><%= food.item %></div>
-            <div><%= food.quantity %></div>
-          <% end %>
+          <div><strong>材料</strong></div>
+          <table>
+            <% @foods.each do |food| %>
+            <tr>
+             <td><%= food.item %></td>
+             <td><%= food.quantity %></td>
+            </tr>
+            <% end %>
+          </table>
         </div>
       </div>
       <div class="row">
-        <div>作り方</div>
+        <div><strong>作り方</strong></div>
+        <div class="step-table">
+          <table>
           <% @steps.each do |step| %>
-            <div><%= step.process %></div>
-            <div><%= attachment_image_tag step, :process_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %></div>
+          <tr>
+            <td><%= step.process %></td>
+            <td><%= attachment_image_tag step, :process_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x50" %></td>
+          <tr>
           <% end %>
+          </table>
+        </div>
       </div>
-
-
-
-
 
     </div>
   </div>

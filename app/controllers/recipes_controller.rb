@@ -16,6 +16,7 @@ class RecipesController < ApplicationController
   end
 
   def index
+    @recipes = Recipe.all
   end
 
   def show
@@ -25,12 +26,25 @@ class RecipesController < ApplicationController
   end
 
   def edit
+    @recipe = Recipe.find(params[:id])
+    @user = current_user
+    @foods = @recipe.foods.build
+    @steps = @recipe.steps.build
   end
 
   def update
+    recipe = Recipe.find(params[:id])
+    if recipe.update
+      redirect_to recipe_path(recipe)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    recipe = Recipe.find(params[:id])
+    recipe.destroy
+    redirect_to recipes_path
   end
 
    private

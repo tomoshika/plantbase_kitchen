@@ -1,0 +1,9 @@
+<% @recipes.each do |recipe| %>
+ <div class="col-3">
+  <%= link_to recipe_path(recipe.id), class: "link" do %>
+    <%= attachment_image_tag recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", size: "200x150" %></br>
+    <%= recipe.title %></br>
+  <% end %>
+  <%= recipe.memo %></br>
+ </div>
+<% end %>
