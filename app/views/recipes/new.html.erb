@@ -4,9 +4,10 @@
       <h2>レシピ新規投稿</h2>
       <div class="recipe-post">
         <%= form_with(model: @recipe, local: true) do |f| %>
+          <%= f.hidden_field :user_id, :value => @user.id %>
           <div class="form-group">
-            <%= f.label :image, "料理イメージ写真" %></br>
-            <%= f.attachment_field :image, class: "form-control-file" %>
+            <%= f.label :recipe_image, "料理イメージ写真" %></br>
+            <%= f.attachment_field :recipe_image, class: "form-control-file" %>
           </div>
           <div class="form-group">
             <%= f.label :title, "タイトル" %></br>
@@ -21,7 +22,7 @@
               <%= render "recipes/food_fields", f: t %>
             <% end %>
             <div id="detail-association-insertion-point-foods"></div>
-            <div class="float-right mt-2">
+            <div class="offset-10 float-right mt-2">
               <%= link_to_add_association "＋追加", f, :foods,
               class: "btn btn-secondary btn-block",
               data: {
@@ -35,7 +36,7 @@
               <%= render "recipes/step_fields", f: t %>
             <% end %>
             <div id="detail-association-insertion-point-steps"></div>
-            <div class="float-right mt-2">
+            <div class="offset-10 mt-2">
               <%= link_to_add_association "＋追加", f, :steps,
               class: "btn btn-secondary btn-block",
               data: {
@@ -44,8 +45,8 @@
               }%>
             </div>
           </div>
-          <div class="form-group">
-            <%= f.submit "投稿する", class: "btn btn-secondary" %>
+          <div class="offset-5 form-group">
+            <%= f.submit "投稿する", class: "btn btn-dark" %>
           </div>
         <% end %>
       </div>

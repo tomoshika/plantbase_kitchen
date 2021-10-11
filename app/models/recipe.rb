@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
-  attachment :image
+  attachment :recipe_image
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :foods, dependent: :destroy

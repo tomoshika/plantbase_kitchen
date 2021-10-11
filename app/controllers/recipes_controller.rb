@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
+    @user = current_user
     @steps = @recipe.steps.build
     @foods = @recipe.foods.build
   end
@@ -35,9 +36,10 @@ class RecipesController < ApplicationController
    private
 
   def recipe_params
-    params.require(:recipe).permit(:title, :image, :memo, :recipe,
+    params.require(:recipe).permit(:title, :recipe_image, :memo, :user_id,
                                    foods_attributes: [:id, :recipe_id, :item, :quantity, :_destroy],
                                    steps_attributes: [:id, :recipe_id, :process, :process_image, :_destroy])
+                                  # .merge(user_id: current_user.id)
   end
 
 end

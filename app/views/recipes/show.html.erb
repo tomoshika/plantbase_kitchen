@@ -5,14 +5,14 @@
     <div class="col-md-8">
       <div class="row">
         <div class="col-5">
-          <%= attachment_image_tag @recipe, :image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
+          <%= attachment_image_tag @recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
         </div>
         <div class="col-7">
           <h3><%= @recipe.title %></h3>
           <div><%= @recipe.memo %></div>
           <div>材料</div>
           <% @foods.each do |food| %>
-            <div><%= food.items %></div>
+            <div><%= food.item %></div>
             <div><%= food.quantity %></div>
           <% end %>
         </div>
@@ -21,13 +21,13 @@
         <div>作り方</div>
           <% @steps.each do |step| %>
             <div><%= step.process %></div>
-            <div><%= step.process_image %></div>
+            <div><%= attachment_image_tag step, :process_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %></div>
           <% end %>
       </div>
-      
-      
-      
-      
+
+
+
+
 
     </div>
   </div>
