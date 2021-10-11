@@ -21,6 +21,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @comment = Comment.new
     @foods = @recipe.foods
     @steps = @recipe.steps
   end
@@ -34,7 +35,7 @@ class RecipesController < ApplicationController
 
   def update
     recipe = Recipe.find(params[:id])
-    if recipe.update
+    if recipe.update(recipe_params)
       redirect_to recipe_path(recipe)
     else
       render :edit
@@ -50,7 +51,7 @@ class RecipesController < ApplicationController
    private
 
   def recipe_params
-    params.require(:recipe).permit(:title, :recipe_image, :memo, :user_id,
+    params.require(:recipe).permit(:id, :title, :recipe_image, :memo, :user_id,
                                    foods_attributes: [:id, :recipe_id, :item, :quantity, :_destroy],
                                    steps_attributes: [:id, :recipe_id, :process, :process_image, :_destroy])
                                   # .merge(user_id: current_user.id)
