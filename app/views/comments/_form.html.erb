@@ -1,6 +1,7 @@
 <div class="new-comment mt-3">
-  <%= form_with model:[recipe, comment], remote: true do |f| %>
-    <%= f.text_area :recipe_comment, class: "form-control mb-2" %>
+  <h5>コメント投稿はこちら</h5>
+  <%= form_with model:[recipe, comment], local: true do |f| %>
+    <%= f.text_area :recipe_comment, placeholder:"コメント入力", class: "form-control mb-2" %>
     <%= f.submit "送信" %>
   <% end %>
 </div>
@@ -14,7 +15,7 @@
         </td>
         <td><%= comment.recipe_comment %></td>
         <% if comment.user == current_user %>
-          <td><%= link_to "Destroy", recipe_comment_path(recipe, comment), method: :delete, remote: true, class: "btn btn-sm btn-danger" %></td>
+          <td><%= link_to "Destroy", recipe_comment_path(recipe, comment), method: :delete, local: true, class: "btn btn-sm btn-danger" %></td>
         <% end %>
       </tr>
     <% end %>
