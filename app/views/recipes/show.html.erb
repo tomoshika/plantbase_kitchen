@@ -13,7 +13,7 @@
         <div class="col-7">
           <h3><%= @recipe.title %></h3>
           <% if user_signed_in? %>
-            <div><%= render 'likes/likes_btn', recipe: @recipe%></div>
+            <%= render 'likes/likes_btn', recipe: @recipe%>
           <% end %>
           <div><%= @recipe.memo %></div>
           <div><strong>材料</strong></div>

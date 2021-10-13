@@ -1,16 +1,19 @@
 class RelationshipsController < ApplicationController
-  before_action :authenticate_user! 
-  
+  before_action :authenticate_user!
+
+  #following_id　フォローする人
+  #follower_id 　フォローされる人
+
   def create
-    follower = current_user.relationships.build(followed_id: params[:user_id])
-    follower.save
+    following = current_user.relationships.build(follower_id: params[:user_id])
+    following.save
     redirect_to request.referrer || root_path
   end
-  
+
   def destroy
-    follower = current_user.relationships.find_by(followed_id: params[:user_id])
-    follower.destroy
+    following = current_user.relationships.find_by(follower_id: params[:user_id])
+    following.destroy
     redirect_to request.referrer || root_path
   end
-  
+
 end

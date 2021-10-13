@@ -1,14 +1,17 @@
 ja:
   activerecord:
-    attributes:
-      user:
-        current_password: "現在のパスワード"
-        email: "メールアドレス"
-        password: "パスワード"
-        password_confirmation: "確認用パスワード"
-        remember_me: "ログインを記憶"
-    models:
-      user: "ユーザ"
+  errors:
+    messages:
+      record_invalid: "バリデーションに失敗しました: %{errors}"
+  attributes:
+    user:
+      current_password: "現在のパスワード"
+      email: "メールアドレス"
+      password: "パスワード"
+      password_confirmation: "確認用パスワード"
+      remember_me: "ログインを記憶"
+  models:
+    user: "ユーザ"
   devise:
     confirmations:
       new:

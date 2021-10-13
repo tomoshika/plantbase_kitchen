@@ -2,5 +2,5 @@ class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :recipe
 
-  validates :comment, presence: true
+  validates :recipe_comment, presence: true
 end

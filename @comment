@@ -1,0 +1,23 @@
+
+[1mFrom:[0m /home/ec2-user/environment/plantbase_kitchen/app/controllers/comments_controller.rb:15 CommentsController#create:
+
+     [1;34m2[0m: [32mdef[0m [1;34mcreate[0m
+     [1;34m3[0m:   [1;34m# @recipe = Recipe.find(params[:recipe_id])[0m
+     [1;34m4[0m:   [1;34m# @comment = Comment.new(comment_params)[0m
+     [1;34m5[0m:   [1;34m# recipe_comment = current_user.comments.new(comment_params)[0m
+     [1;34m6[0m:   [1;34m# recipe_comment.recipe_id = @recipe.id[0m
+     [1;34m7[0m:   [1;34m# recipe_comment.save[0m
+     [1;34m8[0m:   [1;34m# redirect_to recipe_path(recipe)[0m
+     [1;34m9[0m: 
+    [1;34m10[0m:   [1;34m# @recipe = Recipe.find(params[:recipe_id])[0m
+    [1;34m11[0m:   @comment = [1;34;4mComment[0m.new(comment_params)
+    [1;34m12[0m:   [1;34m# @comment.recipe_id = @recipe.id[0m
+    [1;34m13[0m:   @comment.user_id= current_user.id
+    [1;34m14[0m:   binding.pry
+ => [1;34m15[0m:   [32mif[0m @comment.save
+    [1;34m16[0m:    redirect_to recipe_path(@recipe)
+    [1;34m17[0m:   [32melse[0m
+    [1;34m18[0m:    render [31m[1;31m'[0m[31mrecipe/show[1;31m'[0m[31m[0m
+    [1;34m19[0m:   [32mend[0m
+    [1;34m20[0m: [32mend[0m
+

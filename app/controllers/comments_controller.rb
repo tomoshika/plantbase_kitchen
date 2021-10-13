@@ -1,30 +1,25 @@
 class CommentsController < ApplicationController
   def create
-    # @recipe = Recipe.find(params[:recipe_id])
-    # @comment = Comment.new(comment_params)
-    # recipe_comment = current_user.comments.new(comment_params)
-    # recipe_comment.recipe_id = @recipe.id
-    # recipe_comment.save
-    # redirect_to recipe_path(recipe)
-
-    @recipe = Recipe.find(params[:recipe_id])
     @comment = Comment.new(comment_params)
-    @comment.recipe_id = @recipe.id
-    @comment.user_id= current_user.id
+    @comment.user_id = current_user.id
+    @comment.recipe_id = params[:recipe_id]
     if @comment.save
-     redirect_to recipe_path(@recipe)
+     redirect_to recipe_path(@comment.recipe_id), notice: "コメントを保存しました"
     else
-     render 'recipe/show'
+     redirect_to request.referer
     end
   end
 
   def destroy
+    comment = Comment.find(params[:id])
+    comment.destroy
+    redirect_to recipe_path(comment.recipe_id), notice: "コメントを削除しました"
   end
 
   private
 
   def comment_params
-    params.require(:comment).permit(:recipe_comment)
+    params.require(:comment).permit(:recipe_id, :recipe_comment)
   end
 
 end
