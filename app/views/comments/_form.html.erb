@@ -10,7 +10,7 @@
     <% recipe.comments.each do |comment| %>
       <tr>
         <td>
-          <%= attachment_image_tag comment.user, :image,  format: 'jpeg', fallback: "no_image.jpg", size: "40x40" %></br>
+          <%= attachment_image_tag comment.user, :image, format: 'jpeg', fallback: "no_image.jpg", size: "40x40" %></br>
           <%= link_to comment.user.name, user_path(comment.user) %>
         </td>
         <td><%= comment.recipe_comment %></td>

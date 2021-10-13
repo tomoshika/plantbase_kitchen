@@ -12,6 +12,7 @@
         </div>
         <div class="col-7">
           <h3><%= @recipe.title %></h3>
+          <div><%= render 'likes/likes_btn', recipe: @recipe%></div>
           <div><%= @recipe.memo %></div>
           <div><strong>材料</strong></div>
           <table>
