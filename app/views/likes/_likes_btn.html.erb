@@ -1,10 +1,10 @@
 <% if recipe.liked_by?(current_user) %>
-  <%= link_to recipe_likes_path(recipe), method: :delete do %>
+  <%= link_to recipe_like_path(recipe), method: :delete, remote: true do %>
     <div class="fas fa-heart btn-favorite"></div>
   <% end %>
   <%= recipe.likes.count %>
 <% else %>
-  <%= link_to recipe_likes_path(recipe), method: :post do %>
+  <%= link_to recipe_likes_path(recipe), method: :post, remote: true do %>
     <div class="fas fa-heart btn-unfavorite"></div>
   <% end %>
   <%= recipe.likes.count %>

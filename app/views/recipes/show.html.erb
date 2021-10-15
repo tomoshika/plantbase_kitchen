@@ -12,9 +12,11 @@
         </div>
         <div class="col-7">
           <h3><%= @recipe.title %></h3>
-          <% if user_signed_in? %>
-            <%= render 'likes/likes_btn', recipe: @recipe%>
-          <% end %>
+          <div id="like">
+            <% if user_signed_in? %>
+             <%= render 'likes/likes_btn', recipe: @recipe %>
+            <% end %>
+          </div>
           <div><%= @recipe.memo %></div>
           <div><strong>材料</strong></div>
           <table>
@@ -31,6 +33,9 @@
         <div class="col-5">
           <% if user_signed_in? %>
             <%= render 'comments/form', recipe: @recipe, comment: @comment %>
+            <div id="comment">
+              <%= render 'comments/index', recipe: @recipe %>
+            </div>
           <% end %>
         </div>
         <div class="col-7">

@@ -8,9 +8,9 @@ Rails.application.routes.draw do
     get :followings, on: :member
     get :followers, on: :member
   end
-  
+
   resources :recipes do
     resources :comments, only: [:create, :destroy]
-    resource :likes, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
   end
 end
