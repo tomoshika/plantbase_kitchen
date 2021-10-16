@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   def index
   end
+  
+  def timeline
+    @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids])
+  end
 
   def show
     @user = User.find(params[:id])

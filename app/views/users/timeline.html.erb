@@ -1,0 +1,25 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="row mt-3">
+
+    <div class="col-md-9">
+      <h3 class="title">タイムライン</h3>
+      <% @recipes.each do |recipe| %>
+        <div class="card mt-2" style="width: 25rem;">
+          <div class="mt-2"><strong><%= link_to recipe.title, recipe_path(recipe), class: "text-dark" %></strong></div>
+          <%= recipe.created_at.to_s(:short) %>
+          <p><%= recipe.memo %></p>
+          <%= link_to recipe_path(recipe.id), class: "link" do %>
+            <%= attachment_image_tag recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", class: "card-img-bottom" %></br>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-md-3">
+      <h4>ここに検索Box</h4>
+      <h4>配置する</h4>
+    </div>
+
+　</div>
+</div>
