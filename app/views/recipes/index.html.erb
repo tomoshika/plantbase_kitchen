@@ -1,16 +1,12 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
   <div class="row mt-3">
-    
-    <div class="col-md-9">
+    <div class="col-md-8">
       <h2 class="title">レシピ一覧</h2>
         <%= render "recipes/index", recipes: @recipes %>
     </div>
-    
-    <div class="col-md-3">
-      <h4>ここに検索Box</h4>
-      <h4>配置する</h4>
+    <div class="col-md-4">
+      <%= render "searches/search_box" %>
     </div>
-    
 　</div>
 </div>

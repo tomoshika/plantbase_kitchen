@@ -5,12 +5,24 @@ class Recipe < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :foods, dependent: :destroy
   has_many :steps, dependent: :destroy
-  accepts_nested_attributes_for :foods, :steps, allow_destroy: true
   #recipeとネストさせて3つのテーブルのデータを同時に保存できるように処理
-  
+  accepts_nested_attributes_for :foods, :steps, allow_destroy: true
+
+  #userがlikesテーブルに既に存在しているか確かめるメソッド
   def liked_by?(user)
     likes.where(user_id: user.id).exists?
   end
-  #userがlikesテーブルに既に存在しているか確かめるメソッド
+
+
+  #検索機能の定義
+  def self.search(search, word)
+    if search == "perfect_match"
+      @recipe = Recipe.where(name: word)
+    elsif search == "partial_match"
+      @recipe = Recipe.where("title LIKE?","%#{word}%")
+    else
+      @recipe = Recipe.all
+    end
+  end
 
 end
