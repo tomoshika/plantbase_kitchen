@@ -24,6 +24,7 @@ class RecipesController < ApplicationController
     @comment = Comment.new
     @foods = @recipe.foods
     @steps = @recipe.steps
+    @user = @recipe.user
   end
 
   def edit

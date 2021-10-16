@@ -12,14 +12,25 @@
         </div>
         <div class="col-7">
           <h3><%= @recipe.title %></h3>
-          <div id="like">
-            <% if user_signed_in? %>
-             <%= render 'likes/likes_btn', recipe: @recipe %>
-            <% end %>
-          </div>
-          <div><%= @recipe.memo %></div>
-          <div><strong>材料</strong></div>
           <table>
+            <tr>
+              <td>
+                <div id="like">
+                  <% if user_signed_in? %>
+                   <%= render 'likes/likes_btn', recipe: @recipe %>
+                  <% end %>
+                </div>
+              </td>
+              <td><%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", size: "50x50" %></td>
+              <td><%= link_to @recipe.user.name, user_path(@user) %></td>
+            </tr>
+          </table>
+          <table class="table table-sm">
+            <tr><%= @recipe.memo %></tr>
+          　<tr>
+              <th>材料</th>
+              <th>分量</th>
+            </tr>
             <% @foods.each do |food| %>
             <tr>
              <td><%= food.item %></td>
@@ -39,14 +50,14 @@
           <% end %>
         </div>
         <div class="col-7">
-          <div class="mt-3"><strong>作り方</strong></div>
-          <table>
-          <% @steps.each do |step| %>
-          <tr>
-            <td><%= step.process %></td>
-            <td><%= attachment_image_tag step, :process_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x50" %></td>
-          <tr>
-          <% end %>
+          <table class="mt-3">
+            <th>作り方</th>
+            <% @steps.each do |step| %>
+              <tr>
+                <td><%= step.process %></td>
+                <td><%= attachment_image_tag step, :process_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x50" %></td>
+              <tr>
+            <% end %>
           </table>
         </div>
       </div>

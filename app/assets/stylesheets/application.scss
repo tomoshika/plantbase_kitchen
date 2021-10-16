@@ -22,3 +22,22 @@
  .btn-unfavorite {
    color: black;
  }
+
+ .user-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+ }
+
+ .recipe-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+ }
+
+ .card {
+  margin: 0 auto 60px;
+  max-width: 376px;
+  height: 370px;
+}
