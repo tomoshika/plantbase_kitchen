@@ -17,7 +17,7 @@ class Recipe < ApplicationRecord
   #検索機能の定義
   def self.search(search, word)
     if search == "perfect_match"
-      @recipe = Recipe.where(name: word)
+      @recipe = Recipe.where("title LIKE?","#{word}")
     elsif search == "partial_match"
       @recipe = Recipe.where("title LIKE?","%#{word}%")
     else
