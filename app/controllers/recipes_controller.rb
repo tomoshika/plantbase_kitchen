@@ -52,6 +52,12 @@ class RecipesController < ApplicationController
     redirect_to user_path(current_user), notice: "レシピを削除しました"
   end
 
+  def hashtag
+    @user = current_user
+    @tag = Hashtag.find_by(hashname: params[:name])
+    @recipes = @tag.recipes
+  end
+
    private
 
   def recipe_params

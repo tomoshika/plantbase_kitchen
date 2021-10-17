@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_13_065714) do
+ActiveRecord::Schema.define(version: 2021_10_17_042152) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -26,6 +26,22 @@ ActiveRecord::Schema.define(version: 2021_10_13_065714) do
     t.string "quantity", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "hashtag_relations", force: :cascade do |t|
+    t.integer "recipe_id"
+    t.integer "hashtag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hashtag_id"], name: "index_hashtag_relations_on_hashtag_id"
+    t.index ["recipe_id"], name: "index_hashtag_relations_on_recipe_id"
+  end
+
+  create_table "hashtags", force: :cascade do |t|
+    t.string "hashname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hashname"], name: "index_hashtags_on_hashname", unique: true
   end
 
   create_table "likes", force: :cascade do |t|

@@ -14,6 +14,7 @@
           <h3><%= @recipe.title %></h3>
           <table>
             <tr>
+              <td><%= @recipe.created_at.strftime('%Y.%m.%d') %></td>
               <td>
                 <div id="like">
                   <% if user_signed_in? %>
@@ -26,7 +27,8 @@
             </tr>
           </table>
           <table class="table table-sm">
-            <tr><%= @recipe.memo %></tr>
+            <!--<tr><#%= @recipe.memo %></tr>-->
+            <tr><%= render_with_hashtags(@recipe.memo) %></tr>
           　<tr>
               <th>材料</th>
               <th>分量</th>
