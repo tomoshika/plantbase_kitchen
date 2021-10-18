@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3><%= @user.name %>さんがフォロー中</h3>
+      <%= render 'index', users: @users %>
+      <%= link_to 'マイページに戻る', user_path(@user), class: "btn btn-secondary mt-1 ml-1" %>
+    </div>
+  </div>
+</div>

@@ -8,8 +8,13 @@ Rails.application.routes.draw do
   get '/recipe/hashtag/:name' => "recipes#hashtag"
   resources :users, only: [:index, :show, :edit, :update] do
     resource :relationships, only: [:create, :destroy]
-    get :followings, on: :member
-    get :followers, on: :member
+    member do
+      get :followings
+      get :followers
+      get :likes
+    end
+    # get :followings, on: :member
+    # get :followers, on: :member
   end
 
   resources :recipes do

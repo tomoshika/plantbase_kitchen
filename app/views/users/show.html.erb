@@ -9,7 +9,15 @@
         <tr>
           <th><%= @user.name %></th>
         </tr>
-          <td><%= @user.followings.count%>フォロー<%= @user.followers.count %>フォロワー</td>
+          <td>
+            <%= link_to followings_user_path(@user) do %>
+              <%= @user.followings.count %>フォロー
+            <% end %>
+            |
+            <%= link_to followers_user_path(@user) do %>
+              <%=@user.followers.count %>フォロワー
+            <% end %>
+          </td>
         <tr>
           <td><%= @user.introduction %></td>
         </tr>

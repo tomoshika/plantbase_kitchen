@@ -10,7 +10,8 @@
           <% if user_signed_in? %>
             <li><%= link_to 'タイムライン', users_timeline_path, class: "btn ml-6 text-light" %></li>
             <li><%= link_to 'レシピ一覧', recipes_path, class: "btn ml-6 text-light" %></li>
-            <li><%= link_to 'レシピを投稿', new_recipe_path, class: "btn ml-6 text-light" %></li>
+            <!--<li><#%= link_to 'レシピを投稿', new_recipe_path, class: "btn ml-6 text-light" %></li>-->
+            <li><%= link_to 'お気に入り', likes_user_path(current_user), class: "btn ml-6 text-light" %></li>
             <li><%= link_to 'マイページ', user_path(current_user), class: "btn ml-6 text-light" %></li>
             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn text-light" %></li>
           <% else %>
