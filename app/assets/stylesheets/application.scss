@@ -23,21 +23,21 @@
    color: black;
  }
 
- .user-image {
+ .user-img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
   object-fit: cover;
  }
 
- .recipe-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+ .recipe-img {
+   object-fit: cover;
  }
 
  .card {
-  margin: 0 auto 60px;
-  max-width: 376px;
-  height: 370px;
+  margin: 0 auto ;
+  max-width: 400px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
 }

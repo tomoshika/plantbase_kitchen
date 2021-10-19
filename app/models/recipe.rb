@@ -11,8 +11,8 @@ class Recipe < ApplicationRecord
   has_many :hashtag_relations
   has_many :hashtags, through: :hashtag_relations
 
-  # validates :title, presence: true
-  # validates :recipe_image, presence: true
+  validates :title, presence: true
+  validates :recipe_image, presence: true
 
   #userがlikesテーブルに既に存在しているか確かめるメソッド
   def liked_by?(user)
