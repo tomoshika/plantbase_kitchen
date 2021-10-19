@@ -1,8 +1,11 @@
 <div class="container">
-  <div class="row mt-2">
-    <div class="col">
-      <h3>お気に入り一覧</h3>
+  <div class="row mt-3">
+    <div class="col-md-8">
+      <h3 class="title">お気に入り一覧</h3>
       <%= render "recipes/index", recipes: @recipes %>
+    </div>
+    <div class="col-md-4">
+      <%= render "searches/search_box" %>
     </div>
   </div>
 </div>

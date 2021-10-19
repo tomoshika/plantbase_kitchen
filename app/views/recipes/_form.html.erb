@@ -2,7 +2,7 @@
     <%= f.hidden_field :user_id, :value => user.id %>
     <div class="form-group">
       <%= f.label :recipe_image, "料理イメージ写真" %></br>
-      <%= f.attachment_field :recipe_image, class: "form-control-file" %>
+      <%= f.file_field :recipe_image, class: "form-control-file" %>
     </div>
     <div class="form-group">
       <%= f.label :title, "タイトル" %>

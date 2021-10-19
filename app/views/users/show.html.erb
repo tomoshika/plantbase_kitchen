@@ -2,7 +2,10 @@
   <div class="row mx-auto mt-3">
     <p id="notice"><%= notice %></p>
     <div class="col-md-4 offset-2">
-        <%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", size: "200x150", class: "user-image" %>
+      <% if @user == current_user %>
+        <h3 class="title">マイページ</h3>
+      <% end %>
+      <%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", size: "200x150", class: "user-image" %>
     </div>
     <div class="col-md-4 pt-5">
       <table>

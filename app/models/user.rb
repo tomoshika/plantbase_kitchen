@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   attachment :image
+  # mount_uploader :image, UserUploader
   has_many :recipes, dependent: :destroy
   has_many :foods, dependent: :destroy
   has_many :steps, dependent: :destroy

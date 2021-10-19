@@ -3,6 +3,7 @@
     <%= link_to recipe_path(recipe.id) do %>
       <div class="card" style="width: 20rem;">
         <div class="card-img-top"><%= attachment_image_tag recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", class: "card-img-top"  %></div>
+        <!--<#%= image_tag(recipe.recipe_image.to_s) %>-->
         <div class="card-body">
           <div class="card-title"><%= recipe.title %></div>
           <div class="card-text">

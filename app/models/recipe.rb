@@ -1,5 +1,6 @@
 class Recipe < ApplicationRecord
   attachment :recipe_image
+  # mount_uploader :recipe_image, RecipeUploader
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -9,6 +10,9 @@ class Recipe < ApplicationRecord
   accepts_nested_attributes_for :foods, :steps, allow_destroy: true
   has_many :hashtag_relations
   has_many :hashtags, through: :hashtag_relations
+
+  # validates :title, presence: true
+  # validates :recipe_image, presence: true
 
   #userがlikesテーブルに既に存在しているか確かめるメソッド
   def liked_by?(user)
