@@ -19,11 +19,34 @@ header {
  background-color: #044d02;
  height: 60px;
  line-height: 40px;
+ color: #faf8f0;
  opacity: 0.9;
 }
 
 body {
  background-color: #faf8f0;
+}
+
+.top-img {
+ position: relative;
+ background-image: url(kitchen.jpg);
+ // background-position: top;
+ background-size: contain;
+ background-repeat: no-repeat;
+ width: 100%;
+ height: 100vh;
+}
+
+.top-message-box {
+ position: absolute;
+ width: 100%;
+ height: 90%;
+ background-color: rgba(255,255,255,0.4);
+ color: #261601;
+}
+
+.message {
+ text-align: center;
 }
 
 #sessions{
@@ -47,7 +70,7 @@ body {
   color: red;
  }
 
- .btn-like {
+ .btn-unlike {
   color: black;
  }
 
