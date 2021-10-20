@@ -1,23 +1,33 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
   <div class="row mt-3">
-    <div class="col-md-3">
+    <div class="col-lg-3 col-md-12">
+      <p id="notice"><%= notice %></p>
       <%= render "searches/search_box" %>
     </div>
-    <div class="col-md-9">
-      <h3 class="title">タイムライン</h3>
-      <div class="row">
-        <% @recipes.each do |recipe| %>
-          <div class="card mt-2" style="width: 25rem;">
-            <div class="mt-2"><strong><%= link_to recipe.title, recipe_path(recipe), class: "text-dark" %></strong></div>
-            <%= recipe.created_at.strftime('%Y.%m.%d') %>
-            <p><%= render_with_hashtags(recipe.memo) %></p>
+    <div class="col-lg-9 col-md-12">
+      <section><h3 class="mb-4">タイムライン</h3></section>
+      <% @recipes.each do |recipe| %>
+        <div class="row mb-3 position-relative">
+          <div class="col-lg-5 col-md-6">
             <%= link_to recipe_path(recipe.id), class: "link" do %>
-              <%= attachment_image_tag recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", class: "card-img-bottom" %></br>
+              <%= attachment_image_tag recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", class: "index-img" %>
             <% end %>
           </div>
-        <% end %>
-      </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="row">
+              <h5><strong><%= link_to recipe.title, recipe_path(recipe), class: "text-dark" %></strong></h5></br>
+              <p><%= recipe.created_at.strftime('%Y.%m.%d') %></p>
+              <p><%= render_with_hashtags(recipe.memo) %></p>
+            </div>
+            <div class="position-absolute bottom-0 start-0 mt-5">
+              <%= link_to user_path(recipe.user), class: "text-dark" do %>
+                <%= attachment_image_tag recipe.user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon" %>
+                <%= recipe.user.name %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
 　</div>
 </div>

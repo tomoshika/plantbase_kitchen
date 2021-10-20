@@ -1,5 +1,5 @@
-<h5>検索はこちら</h5>
-<div class="input-group">
+<h5>検索はこちら <i class="far fa-hand-point-down"></i></h5>
+<div class="input-group mb-3">
   <%= form_tag(search_path, method: :get) do %>
     <%= text_field_tag (:word) %>
     <button type="submit"><i class="fas fa-search"></i></button></br>

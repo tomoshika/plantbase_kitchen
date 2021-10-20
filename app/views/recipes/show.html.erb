@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-5">
           <!--<#%= image_tag(@recipe.recipe_image.to_s) %>-->
-          <div class="recipe-img"><%= attachment_image_tag @recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", size: "300x300" %></div>
+          <div><%= attachment_image_tag @recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", class: "recipe-img" %></div>
           <% if @recipe.user == current_user %>
             <%= link_to 'レシピを編集する', edit_recipe_path(@recipe), class: "btn btn-secondary mt-2 offset-2" %></br>
             <%= link_to 'レシピを削除する', recipe_path(@recipe.id), method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-secondary mt-1 offset-2" %>
@@ -25,7 +25,7 @@
               </td>
               <!--<td><#%= image_tag(@user.image.to_s) %></td>-->
               <td><%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", size: "50x50" %></td>
-              <td><%= link_to @recipe.user.name, user_path(@user) %></td>
+              <td><%= link_to @recipe.user.name, user_path(@recipe.user), class: "text-dark" %></td>
             </tr>
           </table>
           <table class="table table-sm">
@@ -59,7 +59,7 @@
               <tr>
                 <td><%= step.process %></td>
                 <!--<td><#%= image_tag(step.process_image.to_s) %></td>-->
-                <td><%= attachment_image_tag step, :process_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x50" %></td>
+                <td><%= attachment_image_tag step, :process_image, format: 'jpeg', fallback: "no_image.jpg", class: "step-img mb-2" %></td>
               <tr>
             <% end %>
           </table>

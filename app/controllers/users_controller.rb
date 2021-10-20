@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def timeline
     @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids])
+    @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids]).order(created_at: :desc)
   end
 
   def show

@@ -1,13 +1,18 @@
-<% users.each do |user|%>
-  <div class="col-md mt-5">
-    <%= link_to user_path(user) do %>
-      <div class="card" style="max-width: 25rem;">
-        <div class="card-img-top"><%= attachment_image_tag user, :image, format: 'jpeg', fallback: "no_image.jpg" %></div>
-        <div class="card-body mx-auto">
-          <div class="card-title"><%= user.name %></div>
-          <div class="card-body">レシピ投稿数：<%= user.recipes.count%></div>
-        </div>
+<div class="row card-list-container">
+  <% users.each do |user|%>
+    <div class="card mx-auto mt-4 shadow-lg" style="width: 20rem;">
+      <div class="card shadow-lg" style="max-width: 20rem;">
+        <%= link_to user_path(user), class: "text-dark" do %>
+          <div class="card-img-top"><%= attachment_image_tag user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "card-img-top index-img" %></div>
+          <div class="card-body mx-auto">
+            <div class="card-body">
+              <h5 class="card-title"><strong><%= user.name %></strong></h5>
+              <p><%= user.followings.count %> フォロー | <%=user.followers.count %> フォロワー</p>
+              <p>レシピ投稿数：<%= user.recipes.count %></p>
+            </div>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-<% end %>
+    </div>
+  <% end %>
+</div>

@@ -15,29 +15,79 @@
  */
  @import "bootstrap";
 
- .btn-favorite {
-   color: red;
+header {
+ background-color: #044d02;
+ height: 60px;
+ line-height: 40px;
+ opacity: 0.9;
+}
+
+body {
+ background-color: #faf8f0;
+}
+
+#sessions{
+ background-image: url(knife-leaf.jpg);
+ background-position: center;
+ background-size: cover;
+ width: 100%;
+ height: 100vh;
+}
+
+#registrations {
+ background-image: url(knife-tomato.jpg);
+ background-position: center;
+ background-size: cover;
+ width: 100%;
+ height: 100vh;
+}
+
+
+ .btn-like {
+  color: red;
  }
 
- .btn-unfavorite {
-   color: black;
+ .btn-like {
+  color: black;
  }
 
  .user-img {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
   object-fit: cover;
  }
 
- .recipe-img {
-   object-fit: cover;
+// recipe/indexのユーザーアイコン
+ .user-icon {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 50%;
  }
 
+// recipe/showのレシピ画像
+ .recipe-img {
+  height: 300px;
+  width: 350px;
+  object-fit: cover;
+ }
+
+ // recipeとuserの_indexメイン画像
+.index-img {
+ object-fit: cover;
+ height: 250px;
+ width: 318px;
+}
+// 各一覧のcard
  .card {
   margin: 0 auto ;
   max-width: 400px;
-  height: 500px;
+  height: 450px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.step-img {
+ object-fit: cover;
+ height: 80px;
+ width: 100px;
 }

@@ -1,33 +1,15 @@
 <div class="container">
   <div class="row mt-3">
-    <div class="col-md-8">
-      <h3 class="title">"<%= @word %>"の検索結果</h3>
-      <table>
-        <% if @range == '1' %>
-          <% @recipe.each do |recipe| %>
-            <div class="card" style="width: 16rem;">
-              <%= link_to recipe_path(recipe.id), class: "link" do %>
-                <%= attachment_image_tag recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", class: "card-img-top" %></br>
-                <div class="card-body"><%= recipe.title %></div>
-              <% end %>
-              <p><%= recipe.memo %></p>
-            </div>
-          <% end %>
-        <% else %>
-          <% @user.each do |user| %>
-            <div class="card" style="width: 16rem;">
-              <%= link_to user_path(user.id), class: "link" do %>
-                <%= attachment_image_tag user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "card-img-top" %></br>
-                <div class="card-body"><%= user.name %></div>
-              <% end %>
-              <p><%= user.introduction %></p>
-            </div>
-          <% end %>
-        <% end %>
-      </table>
-    </div>
-    <div class="col-md-4">
+    <div class="col-lg-3 col-md-12">
       <%= render "searches/search_box" %>
+    </div>
+    <div class="col-lg-9 col-md-12">
+      <section><h3>"<%= @word %>"の検索結果</h3></section>
+      <% if @range == '1' %>
+        <%= render "recipes/index", recipes: @recipes %>
+      <% else %>
+        <%= render 'users/index', users: @users %>
+      <% end %>
     </div>
   </div>
 </div>
