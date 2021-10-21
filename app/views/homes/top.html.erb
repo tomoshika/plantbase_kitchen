@@ -3,21 +3,23 @@
     <div class="col-12">
       <div class="row">
         <p id="notice"><%= notice %></p>
-        <div class="col-lg-10 col-md-12 top-img mx-auto">
-          <div class="top-message-box">
-            <div class="message">
-              <h1>Plantbase　キッチン</h1>
+        <div class="col-lg-10 col-md-12 mx-auto">
+          <div class="top-img position-relative">
+            <div class="top-message-box position-absolute top-50 start-50 translate-middle">
+              <div class="message mt-5">
+                <h1>Plantbase　キッチン</h1>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row pb-5">
         <div class="col-lg-3 col-md-12">
           <%= render "searches/search_box" %>
         </div>
         <div class="col-lg-9 col-md-12">
           <section><h3>新着レシピ</h3></section>
-          <div id="slider" class="mt-2">
+          <div id="slider" class="mt-4">
             <% @recipes.each do |recipe| %>
               <%= link_to recipe_path(recipe.id) do %>
                 <%= attachment_image_tag recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", class: "slider-img" %>
@@ -34,9 +36,9 @@
                   slidesToShow: 3, //表示するスライドの数
                   slidesToScroll: 3, //スクロールで切り替わるスライドの数
 
-                  //レスポンシブ対応させたい場合は以下も記述
+                  //レスポンシブ対応 画面幅768px
                   responsive: [{
-                    breakpoint: 768, //画面幅768pxで以下のセッティング
+                    breakpoint: 768,
                     settings: {
                       slidesToShow: 2,
                       slidesToScroll: 2,

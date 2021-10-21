@@ -1,13 +1,13 @@
 class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
-    @user = current_user
     @steps = @recipe.steps.build
     @foods = @recipe.foods.build
   end
 
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.user_id = current_user.id
     # if params[:recipe_image] != nil
     #   recipe_image = MiniMagick::Recipe.read(params[:recipe_image])
     #   recipe_image.resize_to_fill "128x128"
@@ -21,8 +21,7 @@ class RecipesController < ApplicationController
   end
 
   def index
-    # @recipes = Recipe.all
-    @recipes = Recipe.page(params[:page]).reverse_order
+    @recipes = Recipe.page(params[:page]).reverse_order.per(10)
   end
 
   def show
@@ -31,6 +30,7 @@ class RecipesController < ApplicationController
     @foods = @recipe.foods
     @steps = @recipe.steps
     @user = @recipe.user
+    @like = current_user.likes.find_by(recipe_id: @recipe.id)
   end
 
   def edit
@@ -67,10 +67,9 @@ class RecipesController < ApplicationController
    private
 
   def recipe_params
-    params.require(:recipe).permit(:id, :title, :recipe_image, :memo, :user_id,
+    params.require(:recipe).permit(:id, :title, :recipe_image, :memo,
                                    foods_attributes: [:id, :recipe_id, :item, :quantity, :_destroy],
                                    steps_attributes: [:id, :recipe_id, :process, :process_image, :_destroy])
-                                  # .merge(user_id: current_user.id)
   end
 
 end

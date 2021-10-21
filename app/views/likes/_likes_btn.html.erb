@@ -1,6 +1,6 @@
 <!--liked_byメソッドはrecipe.rbに定義-->
 <% if recipe.liked_by?(current_user) %>
-  <%= link_to recipe_like_path(recipe), method: :delete, remote: true do %>
+  <%= link_to recipe_like_path(recipe, like), method: :delete, remote: true do %>
     <div class="fas fa-heart btn-like"></div>
   <% end %>
   <%= recipe.likes.count %>

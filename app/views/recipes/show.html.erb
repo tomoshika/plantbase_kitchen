@@ -20,7 +20,7 @@
               <td>
                 <div id="like">
                   <% if user_signed_in? %>
-                   <%= render 'likes/likes_btn', recipe: @recipe %>
+                   <%= render 'likes/likes_btn', recipe: @recipe, like: @like %>
                   <% end %>
                 </div>
               </td>

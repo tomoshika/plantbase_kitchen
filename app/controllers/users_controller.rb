@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  def index
-  end
 
   def timeline
     @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids]).page(params[:page]).reverse_order
@@ -38,7 +36,10 @@ class UsersController < ApplicationController
   def likes
     user = User.find(params[:id])
     likes = Like.where(user_id: user.id).pluck(:recipe_id)
-    @recipes = Recipe.find(likes)
+    # @recipes = Recipe.find(likes)
+    # @recipes = Recipe.find(likes).page(params[:page]).reverse_order
+    #liked_recipe_ids
+    @recipes = Recipe.where(id: likes).page(params[:page]).reverse_order.per(6)
   end
 
 

@@ -1,8 +1,8 @@
 class LikesController < ApplicationController
   def create
     @recipe = Recipe.find(params[:recipe_id])
-    like = current_user.likes.new(recipe_id: @recipe.id)
-    like.save
+    @like = current_user.likes.new(recipe_id: @recipe.id)
+    @like.save
   end
 
   def destroy

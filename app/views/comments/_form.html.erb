@@ -1,7 +1,7 @@
-<div class="new-comment mt-3">
-  <h5>コメント投稿はこちら</h5>
+<div class="new-comment mt-3 mb-4">
+  <h5>コメント<i class="far fa-comment"></i></h5>
   <%= form_with model:[recipe, comment], remote: true do |f| %>
     <%= f.text_area :recipe_comment, placeholder:"コメント入力", class: "form-control mb-2" %>
-    <%= f.submit "送信" %>
+    <%= f.submit "送信", class: "btn btn-secondary float-right mt-2 mb-3" %>
   <% end %>
 </div>

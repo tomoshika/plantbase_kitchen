@@ -1,5 +1,4 @@
   <%= form_with(model: recipe, local: true) do |f| %>
-    <%= f.hidden_field :user_id, :value => user.id %>
     <div class="form-group">
       <%= f.label :recipe_image, "料理イメージ写真" %></br>
       <%= f.file_field :recipe_image, class: "form-control-file" %>
