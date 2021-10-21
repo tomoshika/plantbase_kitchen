@@ -3,13 +3,13 @@ class UsersController < ApplicationController
   end
 
   def timeline
-    @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids])
-    @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids]).order(created_at: :desc)
+    @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids]).page(params[:page]).reverse_order
+    # @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids])
   end
 
   def show
     @user = User.find(params[:id])
-    @recipes = @user.recipes
+    @recipes = @user.recipes.page(params[:page]).reverse_order
   end
 
   def edit

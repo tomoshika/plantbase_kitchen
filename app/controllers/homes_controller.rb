@@ -1,7 +1,7 @@
 class HomesController < ApplicationController
   def top
     @recipes = Recipe.all
-    @recipes = Recipe.all.order(created_at: :desc)
+    @recipes = Recipe.page(params[:page]).reverse_order
   end
 
   def about

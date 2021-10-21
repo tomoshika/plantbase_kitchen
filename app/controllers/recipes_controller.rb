@@ -21,8 +21,8 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.all
-    @recipes = Recipe.all.order(created_at: :desc)
+    # @recipes = Recipe.all
+    @recipes = Recipe.page(params[:page]).reverse_order
   end
 
   def show
