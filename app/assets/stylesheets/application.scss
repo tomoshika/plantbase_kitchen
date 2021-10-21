@@ -54,7 +54,7 @@ body {
  background-position: center;
  background-size: cover;
  width: 100%;
- height: 100vh;
+ height: 86vh;
 }
 
 #registrations {
@@ -62,9 +62,8 @@ body {
  background-position: center;
  background-size: cover;
  width: 100%;
- height: 100vh;
+ height: 86vh;
 }
-
 
  .btn-like {
   color: red;
@@ -100,6 +99,7 @@ body {
  height: 250px;
  width: 318px;
 }
+
 // 各一覧のcard
  .card {
   margin: 0 auto ;
@@ -118,3 +118,25 @@ body {
 .timeline-box {
  border-bottom: #bf7b28;
 }
+
+.slick-next {
+ right: 10px !important;
+ z-index: 100;
+ }
+
+.slick-prev {
+ left: 10px !important;
+ z-index: 100;
+ }
+
+ .slider-img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+ }
+
+ footer {
+  background-color: #044d02;
+  height: 40px;
+  opacity: 0.9;
+ }
