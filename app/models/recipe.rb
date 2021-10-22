@@ -52,5 +52,6 @@ class Recipe < ApplicationRecord
       recipe.hashtags << tag
     end
   end
+  #hashtagsのヘルパーメソッドはhelpers/recipes_helper.rbに記述
 
 end

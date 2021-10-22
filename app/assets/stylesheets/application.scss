@@ -75,15 +75,24 @@ body {
   color: black;
  }
 
+// user/show
  .user-img {
   border-radius: 50%;
   object-fit: cover;
  }
 
-// recipe/indexのユーザーアイコン
+// recipes/index
  .user-icon {
   height: 70px;
   width: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+ }
+
+ // recipe/show
+ .user-icon-mini {
+  height: 50px;
+  width: 50px;
   object-fit: cover;
   border-radius: 50%;
  }
