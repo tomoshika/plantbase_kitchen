@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row mx-auto mt-3">
     <p id="notice"><%= notice %></p>
-    <div class="col-md-4 offset-2">
+    <div class="col-lg-4 col-md-5 offset-1">
       <% if @user == current_user %>
         <section><h3>マイページ</h3></section>
       <% else %>
@@ -9,33 +9,61 @@
       <% end %>
       <%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpeg", size: "300x300", class: "user-img mt-1 rounded-circle"; %>
     </div>
-    <div class="col-md-4 pt-5">
-      <table>
-        <tr><h5><%= @user.name %></h5></tr>
-        <tr>
-          <%= link_to followings_user_path(@user), class:"text-dark" do %>
-            <%= @user.followings.count %> フォロー
-          <% end %>
-          |
-          <%= link_to followers_user_path(@user), class:"text-dark" do %>
-            <%=@user.followers.count %> フォロワー
-          <% end %>
-        </tr>
-        <tr><td>レシピ投稿数：<%= @user.recipes.count %></td></tr>
-        <tr><td><%= @user.introduction %></td></tr>
-      </table>
-      <% if user_signed_in? %>
-        <% if @user == current_user %>
-          <%= link_to 'レシピを投稿する', new_recipe_path, class: "btn btn-secondary mt-1 ml-1" %>
-          <%= link_to 'アカウント情報編集', edit_user_path(@user), class: "btn btn-secondary mt-1 ml-1" %>
-        <% else %>
-          <% if @user.is_followed_by?(current_user) %>
-            <%= link_to "フォロー外す", user_relationships_path(@user), method: :delete, class: "btn btn-secondary" %>
+    <div class="col-lg-4 col-md-5 pt-5 ml-5">
+      <h5><%= @user.name %></h5>
+      <div class="row mt-1 mb-1">
+        <%= link_to followings_user_path(@user), class:"text-dark" do %>
+          <%= @user.followings.count %> フォロー
+        <% end %>
+         |
+        <%= link_to followers_user_path(@user), class:"text-dark" do %>
+          <%=@user.followers.count %> フォロワー
+        <% end %>
+      </div>
+      <div class="row mb-3">レシピ投稿数：<%= @user.recipes.count %></div>
+      <div class="row mb-1"><%= @user.introduction %></div>
+      <div class="row mt-2">
+        <% if user_signed_in? %>
+          <% if @user == current_user %>
+            <%= link_to 'レシピを投稿する', new_recipe_path, class: "btn btn-secondary mt-2 ml-2" %>
+            <%= link_to 'アカウント情報編集', edit_user_path(@user), class: "btn btn-secondary mt-2 ml-2" %>
           <% else %>
-            <%= link_to "フォローする", user_relationships_path(@user), method: :post, class: "btn btn-secondary" %>
+            <% if @user.is_followed_by?(current_user) %>
+              <%= link_to "フォロー外す", user_relationships_path(@user), method: :delete, class: "btn btn-secondary" %>
+            <% else %>
+              <%= link_to "フォローする", user_relationships_path(@user), method: :post, class: "btn btn-secondary" %>
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
+      </div>
+
+
+      <!--<table>-->
+      <!--  <tr><h5><#%= @user.name %></h5></tr>-->
+      <!--  <tr>-->
+      <!--    <3%= link_to followings_user_path(@user), class:"text-dark" do %>-->
+      <!--      <#%= @user.followings.count %> フォロー-->
+      <!--    <#% end %>-->
+      <!--    |-->
+      <!--    <#%= link_to followers_user_path(@user), class:"text-dark" do %>-->
+      <!--      <#%=@user.followers.count %> フォロワー-->
+      <!--    <#% end %>-->
+      <!--  </tr>-->
+      <!--  <tr><td>レシピ投稿数：<#%= @user.recipes.count %></td></tr>-->
+      <!--  <tr><td><#%= @user.introduction %></td></tr>-->
+      <!--</table>-->
+      <!--<#% if user_signed_in? %>-->
+      <!--  <#% if @user == current_user %>-->
+      <!--    <#%= link_to 'レシピを投稿する', new_recipe_path, class: "btn btn-secondary mt-1 ml-1" %>-->
+      <!--    <#%= link_to 'アカウント情報編集', edit_user_path(@user), class: "btn btn-secondary mt-1 ml-1" %>-->
+      <!--  <#% else %>-->
+      <!--    <#% if @user.is_followed_by?(current_user) %>-->
+      <!--      <#%= link_to "フォロー外す", user_relationships_path(@user), method: :delete, class: "btn btn-secondary" %>-->
+      <!--    <#% else %>-->
+      <!--      <#%= link_to "フォローする", user_relationships_path(@user), method: :post, class: "btn btn-secondary" %>-->
+      <!--    <#% end %>-->
+      <!--  <#% end %>-->
+      <!--<#% end %>-->
     </div>
 　</div>
 　<%= render "recipes/index", recipes: @recipes %>

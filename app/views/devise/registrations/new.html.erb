@@ -1,7 +1,7 @@
 <div id="registrations">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-10 mt-4 mx-auto">
+      <div class="col-lg-4 col-md-10 mt-5 mx-auto">
         <h3><%= t('.sign_up') %></h3>
 
         <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
@@ -30,7 +30,7 @@
           </div>
 
           <div class="actions mt-3 mb-2">
-            <%= f.submit t('.sign_up') %>
+            <%= f.submit t('.sign_up'), class: "btn btn-secondary" %>
           </div>
         <% end %>
 

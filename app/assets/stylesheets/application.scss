@@ -147,6 +147,23 @@ body {
   object-fit: cover;
  }
 
+ // ページネーション
+.pagination li a {
+  border: none;
+  color: #696969;
+}
+
+// 表示中のページ番号
+.pagination .active a {
+  background: #68a355;
+  border-radius: 30px;
+}
+
+// ホバー時
+.pagination li a:hover {
+  border-radius: 30px;
+}
+
  footer {
   background-color: #044d02;
   height: 40px;

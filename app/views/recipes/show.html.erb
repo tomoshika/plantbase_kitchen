@@ -14,22 +14,6 @@
         </div>
         <div class="col-lg-7 col-md-12">
           <h3><%= @recipe.title %></h3>
-
-          <!--<table>-->
-          <!--  <tr>-->
-          <!--    <td><#%= @recipe.created_at.strftime('%Y.%m.%d') %></td>-->
-          <!--    <td>-->
-          <!--      <div id="like">-->
-          <!--        <#% if user_signed_in? %>-->
-          <!--         <#%= render 'likes/likes_btn', recipe: @recipe, like: @like %>-->
-          <!--        <#% end %>-->
-          <!--      </div>-->
-          <!--    </td>-->
-              <!--<td><#%= image_tag(@user.image.to_s) %></td>-->
-          <!--    <td><#%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", size: "50x50" %></td>-->
-          <!--    <td><#%= link_to @recipe.user.name, user_path(@recipe.user), class: "text-dark" %></td>-->
-          <!--  </tr>-->
-          <!--</table>-->
           <div class="row">
             <div class="col-2 mt-3"><%= @recipe.created_at.strftime('%Y.%m.%d') %></div>
             <div class="col-2 mt-3" id="like" >
