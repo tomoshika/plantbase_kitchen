@@ -37,7 +37,6 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     likes = Like.where(user_id: user.id).pluck(:recipe_id)
     # @recipes = Recipe.find(likes)
-    # @recipes = Recipe.find(likes).page(params[:page]).reverse_order
     #liked_recipe_ids
     @recipes = Recipe.where(id: likes).page(params[:page]).reverse_order.per(6)
   end

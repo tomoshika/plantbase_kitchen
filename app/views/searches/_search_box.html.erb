@@ -7,6 +7,3 @@
     <%= select_tag 'search', options_for_select([["完全一致","perfect_match"], ["部分一致","partial_match"]]) %>
   <% end %>
 </div>
-<% if user_signed_in? %>
-  <%= link_to 'レシピを投稿する', new_recipe_path, class: "btn btn-secondary mb-4" %>
-<% end %>
