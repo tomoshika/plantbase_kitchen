@@ -12,6 +12,9 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    unless @user == current_user
+      redirect_to root_path
+    end
   end
 
   def update
@@ -38,7 +41,7 @@ class UsersController < ApplicationController
     likes = Like.where(user_id: user.id).pluck(:recipe_id)
     # @recipes = Recipe.find(likes)
     #liked_recipe_ids
-    @recipes = Recipe.where(id: likes).page(params[:page]).reverse_order.per(6)
+    @recipes = Recipe.where(id: likes).page(params[:page]).reverse_order
   end
 
 

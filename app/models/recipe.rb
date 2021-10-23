@@ -1,6 +1,6 @@
 class Recipe < ApplicationRecord
   attachment :recipe_image
-  # mount_uploader :recipe_image, RecipeUploader
+
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -13,6 +13,7 @@ class Recipe < ApplicationRecord
 
   validates :title, presence: true
   validates :recipe_image, presence: true
+  validates :comments, associated: true
 
   #userがlikesテーブルに既に存在しているか確かめるメソッド
   def liked_by?(user)

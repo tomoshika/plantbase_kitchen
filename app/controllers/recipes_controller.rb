@@ -8,11 +8,6 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
-    # if params[:recipe_image] != nil
-    #   recipe_image = MiniMagick::Recipe.read(params[:recipe_image])
-    #   recipe_image.resize_to_fill "128x128"
-    #   recipe_image.write "public/images/hoge.jpg"
-    # end
     if @recipe.save
       redirect_to recipe_path(@recipe), notice: "レシピを投稿しました"
     else

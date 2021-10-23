@@ -88,7 +88,7 @@ body {
  .btn-1:hover {
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
  }
- .btn-1:active .btn-2:active {
+ .btn-1:active {
   box-shadow: none;
   position: relative;
   top: 2px;
@@ -194,6 +194,15 @@ body {
 // ホバー時
 .pagination li a:hover {
   border-radius: 50%;
+}
+
+#errors {
+ color: #e04a04;
+}
+
+#alert, #notice {
+ color: #e04a04;
+ font-weight: bold;
 }
 
  footer {
