@@ -80,6 +80,33 @@ body {
   color: black;
  }
 
+ .btn-1 {
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+  background-color: #e3dad3;
+  border-radius: 100vh;
+ }
+ .btn-1:hover {
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+ }
+ .btn-1:active .btn-2:active {
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+ }
+
+ .btn-2 {
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+  border-radius: 100vh;
+ }
+ .btn-2:hover {
+  box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+ }
+ .btn-2:active {
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+ }
+
 // user/show
  .user-img {
   border-radius: 50%;
@@ -161,12 +188,12 @@ body {
 // 表示中のページ番号
 .pagination .active a {
   background-color: #68a355;
-  border-radius: 30px;
+  border-radius: 50%;
 }
 
 // ホバー時
 .pagination li a:hover {
-  border-radius: 30px;
+  border-radius: 50%;
 }
 
  footer {

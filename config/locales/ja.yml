@@ -10,12 +10,12 @@ ja:
       recipe:
         title: タイトル
         recipe_image: レシピのイメージ画像
-      food:
+      recipe/foods:
         item: 材料
         quantity: 分量
-      step:
+      recipe/steps:
         process: 手順
-      comment:
+      recipe/comments:
         recipe_comment: コメント
   date:
     abbr_day_names:

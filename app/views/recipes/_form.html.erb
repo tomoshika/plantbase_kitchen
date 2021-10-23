@@ -18,7 +18,7 @@
       <div id="detail-association-insertion-point-foods"></div>
       <div class="offset-10 float-right mt-2">
         <%= link_to_add_association "＋追加", f, :foods,
-        class: "btn btn-secondary btn-block",
+        class: "btn btn-1 btn-block",
         data: {
         association_insertion_node: '#detail-association-insertion-point-foods',
         association_insertion_method: 'append'
@@ -32,14 +32,14 @@
       <div id="detail-association-insertion-point-steps"></div>
       <div class="offset-10 mt-2">
         <%= link_to_add_association "＋追加", f, :steps,
-        class: "btn btn-secondary btn-block",
+        class: "btn btn-1 btn-block",
         data: {
         association_insertion_node: '#detail-association-insertion-point-steps',
         association_insertion_method: 'append'
         }%>
       </div>
     </div>
-    <div class="offset-5 form-group">
-      <%= f.submit "投稿する", class: "btn btn-dark" %>
+    <div class="offset-5 form-group mb-2">
+      <%= f.submit "投稿する", class: "btn btn-2 btn-secondary" %>
     </div>
   <% end %>

@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # validates :name, presence: true
+
   attachment :image
   # mount_uploader :image, UserUploader
   has_many :recipes, dependent: :destroy
