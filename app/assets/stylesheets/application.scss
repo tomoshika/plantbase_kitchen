@@ -35,7 +35,7 @@ body {
 
 .top-img {
  position: relative;
- background-image: image-url(kitchen.jpg);
+ background-image: image-url("kitchen.jpg");
  background-size: contain;
  background-repeat: no-repeat;
  width: 1000px;
@@ -57,7 +57,7 @@ body {
 }
 
 #sessions{
- background-image: image-url(knife-leaf.jpg);
+ background-image: image-url("knife-leaf.jpg");
  background-position: center;
  background-size: cover;
  width: 100%;
@@ -65,7 +65,7 @@ body {
 }
 
 #registrations {
- background-image: image-url(knife-tomato.jpg);
+ background-image: image-url("knife-tomato.jpg");
  background-position: center;
  background-size: cover;
  width: 100%;
