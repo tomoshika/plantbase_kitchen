@@ -7,7 +7,7 @@
       <% else %>
         <section><h3><%= @user.name %>さんのページ</h3></section>
       <% end %>
-      <%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpeg", size: "300x300", class: "user-img mt-3 rounded-circle"; %>
+      <%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", size: "300x300", class: "user-img mt-3 rounded-circle"; %>
     </div>
     <div class="col-lg-4 col-md-5 pt-5 ml-5 mt-5">
       <h5><%= @user.name %></h5>

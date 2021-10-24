@@ -8,7 +8,7 @@
     </div>
     <div class="col-3">
       <%= f.attachment_field :process_image, class: 'step_field', style: 'display:none;' %>
-      <%= attachment_image_tag @steps, :process_image, fallback: 'no_image.jpeg', onClick: "$('.step_field').click()", class: 'img-thumbnail step-prev' %>
+      <%= attachment_image_tag @steps, :process_image, fallback: 'no_image.jpg', onClick: "$('.step_field').click()", class: 'img-thumbnail step-prev' %>
       <script>
          $(function () {
             function readURL(input) {

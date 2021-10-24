@@ -3,7 +3,7 @@
 
       <div class="col-lg-5 col-md-12">
         <%= f.attachment_field :recipe_image, class: 'img_field', style: 'display:none;' %>
-        <%= attachment_image_tag recipe, :recipe_image, fallback: 'no_image.jpeg', onClick: "$('.img_field').click()", class: 'img-thumbnail img_preview' %>
+        <%= attachment_image_tag recipe, :recipe_image, fallback: 'no_image.jpg', onClick: "$('.img_field').click()", class: 'img-thumbnail img_preview' %>
         <script>
          $(function () {
             function readURL(input) {
