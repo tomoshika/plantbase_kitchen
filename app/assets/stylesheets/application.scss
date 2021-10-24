@@ -72,14 +72,15 @@ body {
  height: 86vh;
 }
 
+// いいねボタン
  .btn-like {
   color: red;
  }
-
  .btn-unlike {
   color: black;
  }
 
+// 画面遷移ボタン
  .btn-1 {
   box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
   background-color: #e3dad3;
@@ -94,6 +95,7 @@ body {
   top: 2px;
  }
 
+// 実行ボタン
  .btn-2 {
   box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
   border-radius: 100vh;
@@ -115,8 +117,8 @@ body {
 
 // recipes/index
  .user-icon {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   object-fit: cover;
   border-radius: 50%;
  }

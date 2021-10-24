@@ -13,14 +13,14 @@
               <%= attachment_image_tag recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", class: "index-img" %>
             <% end %>
           </div>
-          <div class="col-lg-4 col-md-6 position-relative">
+          <div class="col-lg-4 col-md-6 border-bottom">
             <div class="row">
               <div class="col">
                 <h5><strong><%= link_to recipe.title, recipe_path(recipe), class: "text-dark" %></strong></h5>
                 <p><%= render_with_hashtags(recipe.memo.truncate(60)) %></p>
               </div>
             </div>
-            <div class="row position-absolute bottom-0 start-0 mt-5">
+            <div class="row mt-5">
               <div class="col">
                 <td><%= recipe.created_at.strftime('%Y.%m.%d') %></td>
                 <%= link_to user_path(recipe.user), class: "text-dark ml-5" do %>
