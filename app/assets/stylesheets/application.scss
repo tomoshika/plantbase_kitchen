@@ -131,11 +131,29 @@ body {
   border-radius: 50%;
  }
 
-// recipe/showのレシピ画像
- .recipe-img {
+ // レシピ画像
+ #img {
   height: 300px;
   width: 350px;
   object-fit: cover;
+ }
+
+// recipe/レシピ画像プレビュー
+ .img_preview {
+  height: 300px;
+  width: 350px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.8;
+ }
+
+// user編集の画像プレビュー
+ .user_preview {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.8;
  }
 
  // recipeとuserの_indexメイン画像
@@ -158,6 +176,14 @@ body {
  object-fit: cover;
  height: 80px;
  width: 100px;
+}
+
+.step-prev {
+ object-fit: cover;
+ height: 80px;
+ width: 100px;
+ cursor: pointer;
+ opacity: 0.8;
 }
 
 .timeline-box {
