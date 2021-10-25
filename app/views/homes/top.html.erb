@@ -3,20 +3,33 @@
     <div class="col-12">
       <div class="row mx-auto">
         <p id="notice"><%= notice %></p>
-        <!--<div class="col-lg-10 col-md-12 mx-auto">-->
-          <div class="top-img">
-            <div class="top-message-box">
-              <div class="message mt-5">
-                <h1>Plantbase　キッチン</h1>
-              </div>
+        <div class="top-img col-lg-10 col-md-12 mx-auto">
+          <div class="top-message-box">
+            <div class="message mt-3">
+              P L A N T</br>
+              B A C E</br>
+              キッチン
             </div>
+            <div class="top-sub-message">
+
+            </div>
+            <% unless user_signed_in? %>
+              <div class="top-btn mt-5">
+                <%= link_to 'プラントベースってなぁに？', home_about_path, class: "btn btn-3" %></br>
+                <%= link_to 'アカウント登録', new_user_registration_path, class: "btn btn-2 mt-3" %>
+                <%= link_to 'ログイン', new_user_session_path, class: "btn btn-2 mt-3 ml-3" %>
+              </div>
+            <% end %>
           </div>
-        <!--</div>-->
+        </div>
       </div>
+
       <div class="row mt-5 pb-5">
+
         <div class="col-lg-3 col-md-12">
           <%= render "searches/search_box" %>
         </div>
+
         <div class="col-lg-9 col-md-12">
           <div class="row">
             <div class="col-8"><section><h3>新着レシピ</h3></section></div>
@@ -55,8 +68,8 @@
               });
             });
           </script>
-          <!--<#%= render "recipes/index", recipes: @recipes %>-->
         </div>
+
       </div>
     </div>
   </div>

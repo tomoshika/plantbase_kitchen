@@ -21,17 +21,18 @@
               </div>
             </div>
             <div class="row mt-5">
-              <div class="col">
-                <td><%= recipe.created_at.strftime('%Y.%m.%d') %></td>
-                <%= link_to user_path(recipe.user), class: "text-dark ml-5" do %>
-                  <td><%= recipe.user.name %></td>
-                  <td><%= attachment_image_tag recipe.user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon" %></td>
-                <% end %>
-                </div>
+              <div class="col-6"><%= recipe.created_at.strftime('%Y.%m.%d') %></div>
+              <%= link_to user_path(recipe.user), class: "text-dark ml-5" do %>
+                <div class="col-3"><%= attachment_image_tag recipe.user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon" %></div>
+                <div class="col-3"><%= recipe.user.name %></div>
+              <% end %>
             </div>
           </div>
         </div>
       <% end %>
+      <div class="offset-3 text-dark mt-4">
+        <%= paginate @recipes %>
+      </div>
     </div>
 　</div>
 </div>

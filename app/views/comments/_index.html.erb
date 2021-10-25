@@ -1,16 +1,14 @@
-<div class="mt-2 mb-3">
-  <table>
-    <% recipe.comments.each do |comment| %>
-      <tr>
-        <td>
-          <%= attachment_image_tag comment.user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon-mini" %></br>
-          <%= link_to comment.user.name, user_path(comment.user), class: "text-dark" %>
-        </td>
-        <td><%= comment.recipe_comment %></td>
-        <% if comment.user == current_user %>
-          <td><%= link_to "", recipe_comment_path(recipe, comment), method: :delete, remote: true, class: "btn btn-sm btn-secondary fas fa-trash-alt" %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </table>
+<div class="mb-3">
+  <% recipe.comments.each do |comment| %>
+    <div class="row">
+      <div class="col-2">
+        <%= attachment_image_tag comment.user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon-mini" %></br>
+        <%= link_to comment.user.name, user_path(comment.user), class: "text-dark" %>
+      </div>
+      <div class="col-6"><%= comment.recipe_comment %></div>
+      <% if comment.user == current_user %>
+        <div class="col-1"><%= link_to "", recipe_comment_path(recipe, comment), method: :delete, remote: true, class: "btn btn-sm btn-1 fas fa-trash-alt" %></div>
+      <% end %>
+    </div>
+  <% end %>
 </div>

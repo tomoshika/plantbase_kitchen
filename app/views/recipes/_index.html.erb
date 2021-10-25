@@ -3,12 +3,12 @@
     <div class="card mx-auto mt-4 shadow-lg" style="width: 20rem;">
       <%= link_to recipe_path(recipe.id) do %>
         <%= attachment_image_tag recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", class: "card-img-top index-img" %>
-        <!--<#%= image_tag(recipe.recipe_image.to_s) %>-->
       <% end %>
       <div class="card-body">
         <div class="row">
           <div class="col-4">
             <%= attachment_image_tag recipe.user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon mt-3 rounded-circle"; %>
+            <%= recipe.user.name %>
           </div>
           <div class="col-8">
             <p class="card-title">
@@ -28,4 +28,6 @@
     </div>
   <% end %>
 </div>
-<div class="offset-6 text-dark mt-4"><%= paginate recipes %></div>
+<div class="offset-6 text-dark mt-4">
+  <%= paginate recipes %>
+</div>

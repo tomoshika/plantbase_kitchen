@@ -3,6 +3,9 @@
     <div class="col-lg-3 col-md-12">
       <p id="notice"><%= notice %></p>
       <%= render "searches/search_box" %>
+      <% unless user_signed_in? %>
+        <%= render "layouts/guest_message" %>
+      <% end %>
     </div>
     <div class="col-lg-9 col-md-12">
       <section><h3>レシピ一覧</h3></section>

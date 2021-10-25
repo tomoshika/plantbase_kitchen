@@ -45,6 +45,8 @@
             <div id="errors"><%= render 'layouts/errors', obj: @comment %></div>
             <%= render 'comments/form', recipe: @recipe, comment: @comment %>
             <div id="comment"><%= render 'comments/index', recipe: @recipe %></div>
+          <% else %>
+            <%= render "layouts/guest_message" %>
           <% end %>
         </div>
         <div class="col-lg-7 col-md-12">

@@ -25,7 +25,9 @@ class RecipesController < ApplicationController
     @foods = @recipe.foods
     @steps = @recipe.steps
     @user = @recipe.user
-    @like = current_user.likes.find_by(recipe_id: @recipe.id)
+    if user_signed_in?
+      @like = current_user.likes.find_by(recipe_id: @recipe.id)
+    end
   end
 
   def edit
@@ -56,7 +58,7 @@ class RecipesController < ApplicationController
   def hashtag
     @user = current_user
     @tag = Hashtag.find_by(hashname: params[:name])
-    @recipes = @tag.recipes
+    @recipes = @tag.recipes.page(params[:page]).reverse_order.per(10)
   end
 
    private
