@@ -43,7 +43,6 @@ section {
 main {
  min-height:590px;
  height:auto !important;
- height:590px;
  color: #261601;
 }
 
@@ -57,8 +56,12 @@ body {
  background-image: image-url("kitchen.jpg");
  background-size: contain;
  background-repeat: no-repeat;
- width: 1000px;
- height: 580px;
+ width: 1200px;
+ height: 620px;
+ // width: 1000px;
+ // height: 580px;
+ background-color:rgba(255,255,255,0.3);
+ background-blend-mode:lighten;
 }
 // トップページ画像の白いボックス
 .top-message-box {
@@ -68,7 +71,7 @@ body {
  left: 20%;
  width: 60%;
  height: 100%;
- background-color: rgba(255,255,255,0.4);
+ // background-color: rgba(255,255,255,0.4);
  color: #261601;
 }
 // トップページ画像のロゴ
@@ -82,7 +85,21 @@ body {
  text-align: center;
 }
 
-#sessions{
+.about-message {
+ height: 10rem;
+ text-align: center;
+}
+
+#about {
+ background-image: image-url("vege.jpg");
+ background-position: center;
+ background-size: cover;
+ width: 100%;
+ height: 86vh;
+ background-color:rgba(255,255,255,0.2);
+ background-blend-mode:lighten;
+}
+#sessions {
  background-image: image-url("knife-leaf.jpg");
  background-position: center;
  background-size: cover;
