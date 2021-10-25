@@ -3,11 +3,15 @@ class UsersController < ApplicationController
 
   def timeline
     @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids]).page(params[:page]).reverse_order
+    @like = current_user.likes.find_by(recipe_id: @recipes.ids)
   end
 
   def show
     @user = User.find(params[:id])
     @recipes = @user.recipes.page(params[:page]).reverse_order
+    if user_signed_in?
+      @like = current_user.likes.find_by(recipe_id: @recipes.ids)
+    end
   end
 
   def edit
@@ -40,6 +44,7 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     likes = Like.where(user_id: user.id).pluck(:recipe_id)
     @recipes = Recipe.where(id: likes).page(params[:page]).reverse_order
+    @like = user.likes.find_by(recipe_id: @recipes.ids)
     unless user == current_user
       redirect_to root_path
     end

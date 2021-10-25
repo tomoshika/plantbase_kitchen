@@ -20,7 +20,6 @@
   src: font-url('/assets/Senobi-Gothic-Regular.ttf');
  }
 
-
 header {
  background-color: #044d02;
  height: 60px;
@@ -200,11 +199,17 @@ body {
   opacity: 0.8;
  }
 
- // recipeとuserの_indexメイン画像
+ // recipeの_indexメイン画像
 .index-img {
  object-fit: cover;
  height: 250px;
  width: 318px;
+}
+
+.user-img-card {
+ object-fit: cover;
+ height: 290px;
+ width: 290px;
 }
 
 // 各一覧のcard

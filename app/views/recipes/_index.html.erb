@@ -6,28 +6,39 @@
       <% end %>
       <div class="card-body">
         <div class="row">
-          <div class="col-4">
-            <%= attachment_image_tag recipe.user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon mt-3 rounded-circle"; %>
+          <div class="col-5">
+            <%= attachment_image_tag recipe.user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon mt-3 rounded-circle"; %></br>
             <%= recipe.user.name %>
+            <div class="row mt-2">
+              <% if user_signed_in? %>
+                <div class="ml-2" id="like" >
+                  <%= render 'likes/likes_btn', recipe: recipe, like: @like %>
+                </div>
+                <div class="ml-2">
+                  <i class="far fa-comment"></i> <%= recipe.comments.count %>
+                </div>
+              <% end %>
+            </div>
           </div>
-          <div class="col-8">
-            <p class="card-title">
+          <div class="col-7">
+            <div class="card-title">
               <%= link_to recipe_path(recipe.id), class:"text-dark" do %>
                 <strong><%= recipe.title %></strong>
               <% end %>
-            <p>
-            <p class="card-text">
+            </div>
+            <div >
               <%= recipe.created_at.strftime('%Y.%m.%d') %></br>
               <%= render_with_hashtags(recipe.memo.truncate(30)) %>
               <!--<#%= recipe.memo.truncate(30) %>-->
               <!--<#%= render_with_hashtags(recipe.memo) %>-->
-            </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   <% end %>
 </div>
+
 <div class="offset-6 text-dark mt-4">
   <%= paginate recipes %>
 </div>
