@@ -11,8 +11,8 @@
             <%= recipe.user.name %>
             <div class="row mt-2">
               <% if user_signed_in? %>
-                <div class="ml-2" id="like" >
-                  <%= render 'likes/likes_btn', recipe: recipe, like: @like %>
+                <div class="ml-2" id="like<%= recipe.id %>" >
+                  <%= render 'likes/likes_btn', recipe: recipe, like: like %>
                 </div>
                 <div class="ml-2">
                   <i class="far fa-comment"></i> <%= recipe.comments.count %>
@@ -26,11 +26,9 @@
                 <strong><%= recipe.title %></strong>
               <% end %>
             </div>
-            <div >
+            <div>
               <%= recipe.created_at.strftime('%Y.%m.%d') %></br>
               <%= render_with_hashtags(recipe.memo.truncate(30)) %>
-              <!--<#%= recipe.memo.truncate(30) %>-->
-              <!--<#%= render_with_hashtags(recipe.memo) %>-->
             </div>
           </div>
         </div>

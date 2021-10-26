@@ -80,6 +80,11 @@ body {
  text-align: center;
  font-size: 70px;
 }
+.sub-message{
+ font-family: 'Senobi-Gothic-Regular';
+ text-align: center;
+ font-size: 27px;
+}
 // トップメッセージ下のボタン
 .top-btn {
  text-align: center;
@@ -145,7 +150,7 @@ body {
   top: 2px;
  }
 
- // オレンジボタン
+ // 濃いオレンジボタン
 .btn-3 {
   box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
   background-color: #d17711;
@@ -174,7 +179,6 @@ body {
   border-radius: 50%;
   object-fit: cover;
  }
-
 // recipes/index
  .user-icon {
   height: 60px;
@@ -182,7 +186,6 @@ body {
   object-fit: cover;
   border-radius: 50%;
  }
-
  // recipe/show
  .user-icon-mini {
   height: 50px;
@@ -190,8 +193,7 @@ body {
   object-fit: cover;
   border-radius: 50%;
  }
-
- // レシピ画像
+ // recipe/showレシピ画像
  #img {
   height: 300px;
   width: 350px;
@@ -206,7 +208,6 @@ body {
   cursor: pointer;
   opacity: 0.8;
  }
-
 // user編集の画像プレビュー
  .user_preview {
   height: 300px;
@@ -216,19 +217,6 @@ body {
   opacity: 0.8;
  }
 
- // recipeの_indexメイン画像
-.index-img {
- object-fit: cover;
- height: 250px;
- width: 318px;
-}
-
-.user-img-card {
- object-fit: cover;
- height: 290px;
- width: 290px;
-}
-
 // 各一覧のcard
  .card {
   margin: 0 auto ;
@@ -236,6 +224,17 @@ body {
   height: 450px;
   display: flex;
   flex-wrap: wrap;
+}
+ // recipeの_indexメイン画像
+.index-img {
+ object-fit: cover;
+ height: 250px;
+ width: 318px;
+}
+.user-img-card {
+ object-fit: cover;
+ height: 290px;
+ width: 290px;
 }
 
 // 手順の画像

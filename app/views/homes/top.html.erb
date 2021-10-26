@@ -10,11 +10,11 @@
               B A C E</br>
               キッチン
             </div>
-            <div class="top-sub-message">
-
-            </div>
             <% unless user_signed_in? %>
-              <div class="top-btn mt-5">
+              <div class="sub-message mx-auto">
+                <p>プラントベースの料理のレシピを</br>シェアしよう！</p>
+              </div>
+              <div class="top-btn mt-3">
                 <%= link_to 'プラントベースってなぁに？', home_about_path, class: "btn btn-3" %></br>
                 <%= link_to 'アカウント登録', new_user_registration_path, class: "btn btn-2 mt-3" %>
                 <%= link_to 'ログイン', new_user_session_path, class: "btn btn-2 mt-3 ml-3" %>
@@ -25,11 +25,9 @@
       </div>
 
       <div class="row mt-5 pb-5">
-
         <div class="col-lg-3 col-md-12">
-          <%= render "searches/search_box" %>
+          <%= render "searches/search_box", tags: @tags %>
         </div>
-
         <div class="col-lg-9 col-md-12">
           <div class="row">
             <div class="col-8"><section><h3>新着レシピ</h3></section></div>

@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row mt-4">
     <div class="col-lg-3 col-md-12">
-      <%= render "searches/search_box" %>
+      <%= render "searches/search_box", tags: @tags %>
     </div>
     <div class="col-lg-9 col-md-12">
       <section><h3 class="title">お気に入り一覧</h3></section>
-      <%= render "recipes/index", recipes: @recipes %>
+      <%= render "recipes/index", recipes: @recipes, like: @like %>
     </div>
   </div>
 </div>

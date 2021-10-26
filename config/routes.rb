@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "home/about" => "homes#about"
   get "users/timeline" => "users#timeline"
   get 'search' => 'searches#search'
-  get '/recipe/hashtag/:name' => "recipes#hashtag"
+  get '/recipes/:name' => "recipes#index", as:'hashtag_search'
   resources :users, only: [:show, :edit, :update] do
     resource :relationships, only: [:create, :destroy]
     member do
@@ -13,8 +13,6 @@ Rails.application.routes.draw do
       get :followers
       get :likes
     end
-    # get :followings, on: :member
-    # get :followers, on: :member
   end
 
   resources :recipes do

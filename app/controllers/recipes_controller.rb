@@ -17,6 +17,15 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.page(params[:page]).reverse_order.per(10)
+    # タグ検索でここにrenderしてる
+    if params[:name] != nil
+      @tag = Hashtag.find_by(hashname: params[:name])
+      @recipes = @tag.recipes.page(params[:page]).reverse_order.per(10)
+    end
+     # 検索でここにrenderしてる
+    if params[:search] != nil && params[:word] != nil
+      @recipes = Recipe.search(params[:search], params[:word]).page(params[:page]).reverse_order.per(12)
+    end
     @tags = Hashtag.all
     if user_signed_in?
       @like = current_user.likes.find_by(recipe_id: @recipes.ids)
@@ -63,6 +72,9 @@ class RecipesController < ApplicationController
     @user = current_user
     @tag = Hashtag.find_by(hashname: params[:name])
     @recipes = @tag.recipes.page(params[:page]).reverse_order.per(10)
+    if user_signed_in?
+      @like = current_user.likes.find_by(recipe_id: @recipes.ids)
+    end
   end
 
    private

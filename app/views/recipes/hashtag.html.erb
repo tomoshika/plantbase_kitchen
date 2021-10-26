@@ -2,7 +2,7 @@
   <div class="row mt-2">
     <div class="col">
       <section><h3>ハッシュタグ #<%= @tag.hashname %></h3></section>
-      <%= render 'index', recipes: @recipes %>
+      <%= render 'index', recipes: @recipes, like: @like %>
     </div>
   </div>
 </div>

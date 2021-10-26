@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def timeline
     @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids]).page(params[:page]).reverse_order
     @like = current_user.likes.find_by(recipe_id: @recipes.ids)
+    @tags = Hashtag.all
   end
 
   def show
@@ -45,6 +46,7 @@ class UsersController < ApplicationController
     likes = Like.where(user_id: user.id).pluck(:recipe_id)
     @recipes = Recipe.where(id: likes).page(params[:page]).reverse_order
     @like = user.likes.find_by(recipe_id: @recipes.ids)
+    @tags = Hashtag.all
     unless user == current_user
       redirect_to root_path
     end
