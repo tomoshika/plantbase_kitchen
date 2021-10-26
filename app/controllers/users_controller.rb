@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @recipes = @user.recipes.page(params[:page]).reverse_order
+    @recipes = @user.recipes.page(params[:page]).reverse_order.per(9)
     if user_signed_in?
       @like = current_user.likes.find_by(recipe_id: @recipes.ids)
     end

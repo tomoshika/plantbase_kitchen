@@ -15,7 +15,7 @@
             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn text-light" %></li>
           <% else %>
             <li><%= link_to 'TOP', root_path, class: "btn text-light" %></li>
-            <li><%= link_to 'ABOUT', home_about_path, class: "btn text-light" %></li>
+            <li><%= link_to 'プラントベースとは？', home_about_path, class: "btn text-light" %></li>
             <li><%= link_to 'レシピ一覧', recipes_path, class: "btn text-light" %></li>
             <li><%= link_to '新規登録', new_user_registration_path, class: "btn text-light" %></li>
             <li><%= link_to 'ログイン', new_user_session_path, class: "btn text-light" %></li>

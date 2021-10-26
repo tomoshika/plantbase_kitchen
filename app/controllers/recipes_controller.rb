@@ -17,6 +17,7 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.page(params[:page]).reverse_order.per(10)
+    @tags = Hashtag.all
     if user_signed_in?
       @like = current_user.likes.find_by(recipe_id: @recipes.ids)
     end
