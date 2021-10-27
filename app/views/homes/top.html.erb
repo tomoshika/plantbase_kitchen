@@ -30,10 +30,10 @@
         </div>
         <div class="col-lg-9 col-md-12">
           <div class="row">
-            <div class="col-8"><section><h3>新着レシピ</h3></section></div>
-            <div class="col-3 mt-2">
+            <div class="col-lg-8 col-sm-4"><section><h3>新着レシピ</h3></section></div>
+            <div class="col-lg-3 col-sm-4 mt-2">
               <div class="row">
-                <h5>もっと見る  </h5>
+                <h5 class="slider-nav">もっと見る  </h5>
                 <%= link_to "", recipes_path, class: "fas fa-chevron-circle-right text-dark mt-1 ml-2" %>
               </div>
             </div>
@@ -58,6 +58,12 @@
                   //レスポンシブ対応 画面幅768px
                   responsive: [{
                     breakpoint: 768,
+                    settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 2,
+                    }
+                  },{
+                    breakpoint: 425,
                     settings: {
                       slidesToShow: 2,
                       slidesToScroll: 2,

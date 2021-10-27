@@ -1,23 +1,62 @@
+header {
+ height: 50px;
+ line-height: 35px;
+}
+
 main {
  width: 100%;
- min-height:667px;
+ min-height:657px;
  height:auto !important;
  color: #261601;
 }
 
+.navbar-brand {
+  font-size: 20px;
+}
+
+#sessions {
+ background-position: right;
+ height: 89vh;
+}
+#registrations {
+ background-position: right;
+ height: 89vh;
+}
+
+.top-img {
+  height: 220px;
+}
+
 .top-message-box {
-  width: 60%;
-  height: 300px;
+  height: 220px;
 }
 // トップページ画像のロゴ
 .message {
  font-size: 25px;
 }
-
+// トップロゴ下のメッセージ
 .sub-message{
 font-size: 10px;
 }
 
 .top-btn {
-  height:25px;
+
+}
+
+.btn-2 {
+ with: 100px
+}
+
+.slider-img {
+  height: 160px;
+  width: 160px;
+  object-fit: cover;
+ }
+
+.slider-nav {
+  font-size: 17px;
+}
+
+footer {
+  height: 25px;
 }
