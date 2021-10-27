@@ -1,11 +1,11 @@
 <div class="container">
-  <div class="row">
-    <div class="col-12">
+  <!--<div class="row">-->
+  <!--  <div class="col-12">-->
       <div class="row mx-auto">
         <p id="notice"><%= notice %></p>
         <div class="top-img col-lg-10 col-md-12 mx-auto">
           <div class="top-message-box">
-            <div class="message mt-3">
+            <div class="message">
               P L A N T</br>
               B A C E</br>
               キッチン
@@ -23,7 +23,8 @@
           </div>
         </div>
       </div>
-
+<div class="row">
+    <div class="col-12">
       <div class="row mt-5 pb-5">
         <div class="col-lg-3 col-md-12">
           <%= render "searches/search_box", tags: @tags %>

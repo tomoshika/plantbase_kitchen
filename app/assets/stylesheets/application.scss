@@ -39,6 +39,12 @@ section {
  font-size: 30px;
  color: #261601;
 }
+.about-section {
+  font-size: 40px;
+}
+.about-message {
+ padding-top: 10px;
+}
 
 main {
  min-height:590px;
@@ -68,6 +74,7 @@ body {
  top: 0%;
  left: 20%;
  width: 60%;
+ padding-top: 10px;
  max-height: 580px;
 }
 // トップページ画像のロゴ
@@ -84,6 +91,7 @@ body {
 // トップメッセージ下のボタン
 .top-btn {
  text-align: center;
+
 }
 
 // 検索バー下のメッセージ
@@ -99,6 +107,7 @@ body {
  height: 86vh;
  background-color:rgba(255,255,255,0.2);
  background-blend-mode:lighten;
+  font-size: 17px;
 }
 #sessions {
  background-image: image-url("knife-leaf.jpg");
