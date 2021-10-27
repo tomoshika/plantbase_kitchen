@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
       @tag = Hashtag.find_by(hashname: params[:name])
       @recipes = @tag.recipes.page(params[:page]).reverse_order.per(10)
     end
-     # 検索でここにrenderしてる
+    # 検索でここにrenderしてる
     if params[:search] != nil && params[:word] != nil
       @recipes = Recipe.search(params[:search], params[:word]).page(params[:page]).reverse_order.per(12)
     end

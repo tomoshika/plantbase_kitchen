@@ -296,3 +296,12 @@ body {
   height: 40px;
   opacity: 0.9;
  }
+
+  // レスポンシブ
+ @media screen and (max-width: 425px) {
+  @import "breakpoints/425";
+ }
+
+ @media screen and (max-width: 768px) {
+ @import "breakpoints/768";
+}
