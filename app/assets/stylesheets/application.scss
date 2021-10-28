@@ -17,7 +17,7 @@
 
  @font-face {
   font-family: 'Senobi-Gothic-Regular';
-  src: font-url('/assets/Senobi-Gothic-Regular.ttf');
+  src: asset_url('Senobi-Gothic-Regular.ttf') format("truetype");
  }
 
 header {
