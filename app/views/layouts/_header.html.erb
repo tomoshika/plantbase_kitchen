@@ -1,6 +1,6 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark p-1">
-    <div class="container">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark p-1">
       <a class="navbar-brand" href="/"><span class="mx-auto">PLANTBACEキッチン</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,20 +8,20 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
-            <li><%= link_to 'タイムライン', users_timeline_path, class: "btn ml-6 text-light" %></li>
-            <li><%= link_to 'レシピ一覧', recipes_path, class: "btn ml-6 text-light" %></li>
-            <li><%= link_to 'お気に入り', likes_user_path(current_user), class: "btn ml-6 text-light" %></li>
-            <li><%= link_to 'マイページ', user_path(current_user), class: "btn ml-6 text-light" %></li>
-            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn text-light" %></li>
+            <li class="nav-item active"><%= link_to 'タイムライン', users_timeline_path, class: "btn ml-6 text-light nav-link" %></li>
+            <li class="nav-item"><%= link_to 'レシピ一覧', recipes_path, class: "btn ml-6 text-light nav-link" %></li>
+            <li class="nav-item"><%= link_to 'お気に入り', likes_user_path(current_user), class: "btn ml-6 text-light nav-link" %></li>
+            <li class="nav-item"><%= link_to 'マイページ', user_path(current_user), class: "btn ml-6 text-light nav-link" %></li>
+            <li class="nav-item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn text-light nav-link" %></li>
           <% else %>
-            <li><%= link_to 'TOP', root_path, class: "btn text-light" %></li>
-            <li><%= link_to 'プラントベースとは？', home_about_path, class: "btn text-light" %></li>
-            <li><%= link_to 'レシピ一覧', recipes_path, class: "btn text-light" %></li>
-            <li><%= link_to '新規登録', new_user_registration_path, class: "btn text-light" %></li>
-            <li><%= link_to 'ログイン', new_user_session_path, class: "btn text-light" %></li>
+            <li class="nav-item active"><%= link_to 'TOP', root_path, class: "btn text-light nav-link" %></li>
+            <li class="nav-item"><%= link_to 'プラントベースとは？', home_about_path, class: "btn text-light nav-link" %></li>
+            <li class="nav-item"><%= link_to 'レシピ一覧', recipes_path, class: "btn text-light nav-link" %></li>
+            <li class="nav-item"><%= link_to '新規登録', new_user_registration_path, class: "btn text-light nav-link" %></li>
+            <li class="nav-item"><%= link_to 'ログイン', new_user_session_path, class: "btn text-light nav-link" %></li>
           <% end %>
         </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>

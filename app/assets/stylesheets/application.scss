@@ -22,7 +22,7 @@
 
 header {
  background-color: #044d02;
- height: 60px;
+ min-height: 60px;
  line-height: 40px;
  color: #faf8f0;
  opacity: 0.9;
@@ -120,11 +120,12 @@ body {
  background-size: cover;
  width: 100%;
  height: 86vh;
+ background-color:rgba(255,255,255,0.2);
+ background-blend-mode:lighten;
 }
 #about {
  background-image: image-url("vege.jpg");
- background-color:rgba(255,255,255,0.2);
- background-blend-mode:lighten;
+ 
   font-size: 17px;
 }
 #sessions {

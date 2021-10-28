@@ -1,21 +1,26 @@
 <div class="nested-fields">
   <div class="row mx-auto mb-1">
+
     <div class="col-8">
       <%= f.text_field :process, class: "form-control", placeholder: "手順" %>
     </div>
+
     <div class="col-1">
       <%= link_to_remove_association "", f, class: "fas fa-trash-alt btn btn-block" %>
     </div>
+
     <div class="col-3">
-      <%= f.attachment_field :process_image, class: 'step_field', style: 'display:none;' %>
-      <%= attachment_image_tag @steps, :process_image, fallback: 'no_image.jpg', onClick: "$('.step_field').click()", class: 'img-thumbnail step-prev' %>
+      <label>
+        <%= f.attachment_field :process_image, class: 'step_field hoge', style: 'display:none;' %>
+        <%= attachment_image_tag @steps, :process_image, fallback: 'no_image.jpg', class: 'img-thumbnail step-prev' %>
+      </label>
       <script>
          $(function () {
             function readURL(input) {
               if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
-                  $('.step-prev').attr('src', e.target.result);
+                  $(input).parents('label').find('.step-prev').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(input.files[0]);
               }
@@ -28,12 +33,5 @@
         </script>
     </div>
 
-    <!--<div class="col-11">-->
-    <!--  <＃%= f.text_field :process, class: "form-control", placeholder: "手順" %></br>-->
-    <!--  <#%= f.attachment_field :process_image, class: "form-control-file" %>-->
-    <!--</div>-->
-    <!--<div class="col-1">-->
-    <!--  <#%= link_to_remove_association "", f, class: "fas fa-trash-alt btn btn-block" %>-->
-    <!--</div>-->
   </div>
 </div>

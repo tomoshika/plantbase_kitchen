@@ -1,5 +1,5 @@
 header {
- height: 50px;
+ min-height: 50px;
  line-height: 35px;
 }
 .navbar-brand {
@@ -50,8 +50,8 @@ padding-top: 5px;
  padding-top: 5px;
 }
 
-.btn-2 {
- with: 100px
+.btn-1, .btn-2, .btn-3 {
+ font-size: 13px;
 }
 
 .slider-img {
@@ -80,7 +80,6 @@ padding-top: 5px;
 // recipe/showレシピ画像
 #img {
   height: 300px;
-  width: 300px;
   object-fit: cover;
  }
 
@@ -112,7 +111,6 @@ padding-top: 5px;
  height: 143px;
  width: 143px;
 }
-
 
 footer {
   height: 25px;
