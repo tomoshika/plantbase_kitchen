@@ -1,8 +1,8 @@
 class RelationshipsController < ApplicationController
   before_action :authenticate_user!
 
-  #following_id　フォローする人
-  #follower_id 　フォローされる人
+  # following_id　フォローする人
+  # follower_id 　フォローされる人
 
   def create
     following = current_user.relationships.build(follower_id: params[:user_id])
@@ -15,5 +15,4 @@ class RelationshipsController < ApplicationController
     following.destroy
     redirect_to request.referrer || root_path
   end
-
 end

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
- before_action :redirect_root, only: :timeline
+  before_action :redirect_root, only: :timeline
 
   def timeline
     @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids]).page(params[:page]).reverse_order
@@ -52,7 +52,6 @@ class UsersController < ApplicationController
     end
   end
 
-
   private
 
   def user_params
@@ -62,5 +61,4 @@ class UsersController < ApplicationController
   def redirect_root
     redirect_to root_path unless user_signed_in?
   end
-
 end

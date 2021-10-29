@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "home/about" => "homes#about"
   get "users/timeline" => "users#timeline"
   get 'search' => 'searches#search'
-  get '/recipe/hashtag/:name' => "recipes#index", as:'hashtag_search'
+  get '/recipe/hashtag/:name' => "recipes#index", as: 'hashtag_search'
   # get '/recipe/hashtag/:name' => "recipes#hashtag", as:'hashtag_search'
   # get '/recipes/:name' => "recipes#index", as:'hashtag_search'
   resources :users, only: [:show, :edit, :update] do

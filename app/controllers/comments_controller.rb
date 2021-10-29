@@ -19,5 +19,4 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:recipe_comment)
   end
-
 end
