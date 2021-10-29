@@ -1,3 +1,9 @@
 main {
- min-height: 907px;
+  min-height: 90vh;
+}
+
+#sessions, #registrations, #about {
+  background-position: right;
+  min-height: 90vh;
+  height:auto !important;
 }

@@ -1,5 +1,5 @@
   <%= form_with(model: recipe, local: true) do |f| %>
-    <div class="row mt-3">
+    <div class="row mt-1">
 
       <div class="col-lg-5 col-md-12">
         <%= f.attachment_field :recipe_image, class: 'img_field', style: 'display:none;' %>
@@ -24,7 +24,7 @@
       </div>
 
       <div class="col-lg-7 col-md-12">
-        <div class="form-group">
+        <div class="form-group mt-1">
           <%= f.label :title, "タイトル" %>
           <%= f.text_field :title, class: "form-control"%>
         </div>

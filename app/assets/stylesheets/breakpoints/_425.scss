@@ -1,19 +1,21 @@
 header {
- min-height: 50px;
- line-height: 35px;
+  min-height: 50px;
+  line-height: 35px;
 }
 .navbar-brand {
   font-size: 20px;
 }
 
 main {
- width: 100%;
- min-height:657px;
+  width: 100%;
+  min-height: 90vh;
+  height:auto !important;
 }
 
-#sessions, #registrations {
- background-position: right;
- height: 89vh;
+#sessions, #registrations, #about {
+  background-position: right;
+  min-height: 90vh;
+  height:auto !important;
 }
 
 // topページ
@@ -33,20 +35,20 @@ main {
 }
 // トップページ画像のロゴ
 .message {
- font-size: 55px;
+  font-size: 55px;
 }
 // トップロゴ下のメッセージ
 .sub-message{
-font-size: 17px;
-padding-top: 5px;
+  font-size: 17px;
+  padding-top: 5px;
 }
 // トップロゴ下のボタン
 .top-btn {
- padding-top: 5px;
+  padding-top: 5px;
 }
 // その他のボタン
 .btn-1, .btn-2, .btn-3 {
- font-size: 13px;
+  font-size: 13px;
 }
 
 // トップページスライダー
@@ -61,9 +63,6 @@ padding-top: 5px;
 
 // aboutページ
 #about {
-  background-position: right;
-  min-height: 89vh;
-  height:auto !important;
   font-size: 13px;
 }
 .about-section {
@@ -79,24 +78,24 @@ padding-top: 5px;
   object-fit: cover;
  }
 .step-img {
- height: 73px;
- width: 73px;
+  height: 73px;
+  width: 73px;
 }
 
 // 各一覧のcard
 .card {
- margin: 0 auto ;
- height: 280px;
- max-width: 186px;
- display: flex;
- flex-wrap: wrap;
- font-size: 1px;
+  margin: 0 auto ;
+  height: 280px;
+  max-width: 186px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1px;
 }
  // recipeの_indexメイン画像
 .index-img {
- object-fit: cover;
- height: 100px;
- width: 184px;
+  object-fit: cover;
+  height: 100px;
+  width: 184px;
 }
 //recipeのcardのuserアイコン
 .user-icon {
@@ -107,9 +106,9 @@ padding-top: 5px;
  }
 // フォローuser一覧のimage
 .user-img-card {
- object-fit: cover;
- height: 143px;
- width: 143px;
+  object-fit: cover;
+  height: 143px;
+  width: 143px;
 }
 
 footer {
