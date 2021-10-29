@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row mx-auto mt-3">
     <p id="notice"><%= notice %></p>
+    
     <div class="col-lg-4 col-md-5 offset-1">
       <% if @user == current_user %>
         <section><h3>マイページ</h3></section>
@@ -9,6 +10,7 @@
       <% end %>
       <%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", size: "300x300", class: "user-img mt-3 shadow-lg rounded-circle"; %>
     </div>
+    
     <div class="col-lg-4 col-md-5 pt-5 ml-5 mt-5">
       <h5><%= @user.name %></h5>
       <div class="row mb-1">
@@ -37,6 +39,7 @@
         <% end %>
       </div>
     </div>
+    
 　</div>
 　<%= render "recipes/index", recipes: @recipes, like: @like %>
 </div>

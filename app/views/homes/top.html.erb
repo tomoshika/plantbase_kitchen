@@ -1,5 +1,5 @@
 <div class="container">
-  
+
   <div class="row mx-auto">
     <p id="notice" class="mt-3"><%= notice %></p>
     <div class="top-img col-lg-10 col-md-12 mx-auto">
@@ -22,7 +22,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="row mt-5 pb-3">
     <div class="col-lg-3 col-md-12">
       <%= render "searches/search_box", tags: @tags %>
@@ -54,14 +54,16 @@
               slidesToShow: 3, //表示するスライドの数
               slidesToScroll: 3, //スクロールで切り替わるスライドの数
 
-              //レスポンシブ対応 画面幅768px
+              //レスポンシブ対応
               responsive: [{
+                // 画面幅768px
                 breakpoint: 768,
                 settings: {
                   slidesToShow: 2,
                   slidesToScroll: 2,
                 }
               },{
+                // 画面幅425px
                 breakpoint: 425,
                 settings: {
                   slidesToShow: 2,
@@ -73,5 +75,5 @@
       </script>
     </div>
   </div>
-  
+
 </div>

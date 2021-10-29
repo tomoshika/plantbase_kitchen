@@ -4,8 +4,8 @@
     <div class="col-lg-10 col-md-12 mx-auto">
       <%= render 'layouts/errors', obj: @user  %>
       <%= form_with model:@user, local:true do |f| %>
+      
 　　　  <div class="row mt-3">
-
 　　　    <div class="col-lg-5 col-md-12 mt-2">
             <%= f.attachment_field :image, class: 'user_field', style: 'display:none;' %>
             <%= attachment_image_tag @user, :image, fallback: 'no_image.jpeg', onClick: "$('.user_field').click()", class: 'img-thumbnail user_preview rounded-circle' %>
@@ -41,8 +41,8 @@
               <%= f.submit "変更を保存する", class: "btn btn-3 offset-4 mt-4" %>
             </div>
           </div>
-
         </div>
+        
       <% end %>
 　　</div>
 　</div>
