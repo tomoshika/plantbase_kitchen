@@ -1,23 +1,23 @@
 <div class="container">
   <div class="row mt-3">
-    
-    <div class="col-lg-3 col-md-12">
+
+    <div class="col-lg-3 col-md-12 mt-3">
       <p id="notice"><%= notice %></p>
       <%= render "searches/search_box", tags: @tags %>
     </div>
-    
+
     <div class="col-lg-9 col-md-12">
       <section><h3 class="mb-4">タイムライン</h3></section>
       <% @recipes.each do |recipe| %>
         <div class="row mb-3">
-          <div class="col-lg-5 col-md-6">
+          <div class="col-lg-5 col-md-6 col-sm-12 ml-3">
             <%= link_to recipe_path(recipe.id), class: "link" do %>
               <%= attachment_image_tag recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", class: "timeline-img" %>
             <% end %>
           </div>
-          <div class="col-lg-4 col-md-6 border-bottom">
+          <div class="col-lg-4 col-md-5 col-sm-12 border-bottom">
             <div class="row">
-              <div class="col">
+              <div class="col mt-2">
                 <h5><strong><%= link_to recipe.title, recipe_path(recipe), class: "text-dark" %></strong></h5>
                 <p><%= render_with_hashtags(recipe.memo.truncate(60)) %></p>
               </div>
@@ -46,6 +46,6 @@
         <%= paginate @recipes %>
       </div>
     </div>
-    
+
 　</div>
 </div>

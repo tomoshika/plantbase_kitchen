@@ -3,6 +3,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
     @steps = @recipe.steps.build
     @foods = @recipe.foods.build
+    @user = current_user
   end
 
   def create
@@ -17,12 +18,12 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.page(params[:page]).reverse_order.per(6)
-    # タグ検索でここにrenderしてる
+    # タグ検索
     if params[:name] != nil
       @tag = Hashtag.find_by(hashname: params[:name])
       @recipes = @tag.recipes.page(params[:page]).reverse_order.per(6)
     end
-    # 検索でここにrenderしてる
+    # 検索
     if params[:search] != nil && params[:word] != nil
       @recipes = Recipe.search(params[:search], params[:word]).page(params[:page]).reverse_order.per(6)
     end

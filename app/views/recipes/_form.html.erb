@@ -38,9 +38,9 @@
             <%= render "recipes/food_fields", f: t %>
           <% end %>
           <div id="detail-association-insertion-point-foods"></div>
-          <div class="offset-10 float-right mt-2">
+          <div class="offset-10 mt-2">
             <%= link_to_add_association "＋追加", f, :foods,
-            class: "btn btn-1 btn-block",
+            class: "btn btn-1",
             data: {
             association_insertion_node: '#detail-association-insertion-point-foods',
             association_insertion_method: 'append'
@@ -55,17 +55,18 @@
           <div id="detail-association-insertion-point-steps"></div>
           <div class="offset-10 mt-2">
             <%= link_to_add_association "＋追加", f, :steps,
-            class: "btn btn-1 btn-block",
+            class: "btn btn-1",
             data: {
             association_insertion_node: '#detail-association-insertion-point-steps',
             association_insertion_method: 'append'
             }%>
           </div>
         </div>
-        <div class="offset-5 form-group mb-4">
+        <div class="form-group offset-2 mb-3">
           <%= f.submit "投稿する", class: "btn btn-3" %>
+          <%= link_to 'マイページに戻る', user_path(user), class: "btn btn-1 ml-2" %>
         </div>
       </div>
-      
+
     </div>
   <% end %>

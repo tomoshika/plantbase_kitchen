@@ -9,15 +9,9 @@ header {
 main {
  width: 100%;
  min-height:657px;
- height:auto !important;
- color: #261601;
 }
 
-#sessions {
- background-position: right;
- height: 89vh;
-}
-#registrations {
+#sessions, #registrations {
  background-position: right;
  height: 89vh;
 }
@@ -46,14 +40,16 @@ main {
 font-size: 17px;
 padding-top: 5px;
 }
+// トップロゴ下のボタン
 .top-btn {
  padding-top: 5px;
 }
-
+// その他のボタン
 .btn-1, .btn-2, .btn-3 {
  font-size: 13px;
 }
 
+// トップページスライダー
 .slider-img {
   height: 160px;
   width: 160px;
@@ -77,7 +73,7 @@ padding-top: 5px;
  padding-top: 0px;
 }
 
-// recipe/showレシピ画像
+// recipe/show画像
 #img {
   height: 300px;
   object-fit: cover;

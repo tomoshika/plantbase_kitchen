@@ -19,7 +19,7 @@ ja:
         quantity: 分量
       recipe/steps:
         process: 手順
-      comments:
+      recipe/comments:
         recipe_comment: コメント
   date:
     abbr_day_names:

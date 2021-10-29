@@ -21,86 +21,86 @@
  }
 
 header {
- background-color: #044d02;
- min-height: 60px;
- line-height: 40px;
- color: #faf8f0;
- opacity: 0.9;
+  background-color: #044d02;
+  min-height: 60px;
+  line-height: 40px;
+  color: #faf8f0;
+  opacity: 0.9;
 }
 
 .navbar-brand {
- font-family: 'Senobi-Gothic-Regular';
- font-size: 30px;
- color: white;
+  font-family: 'Senobi-Gothic-Regular';
+  font-size: 30px;
+  color: white;
 }
 
 section {
- font-family: 'Senobi-Gothic-Regular';
- font-size: 30px;
- color: #261601;
+  font-family: 'Senobi-Gothic-Regular';
+  font-size: 30px;
+  color: #261601;
 }
 .about-section {
   font-size: 40px;
 }
 .about-message {
- padding-top: 10px;
+  padding-top: 10px;
 }
 
 main {
- min-height:590px;
- height:auto !important;
- color: #261601;
+  min-height:590px;
+  height:auto !important;
+  color: #261601;
 }
 
 body {
- background-color: #faf8f0;
+  background-color: #faf8f0;
 }
 
 // トップページイメージ画像
 .top-img {
- position: relative;
- background-image: image-url("kitchen.jpg");
- background-size: contain;
- background-repeat: no-repeat;
- width: 1200px;
- height: 580px;
- background-color:rgba(255,255,255,0.3);
- background-blend-mode:lighten;
+  position: relative;
+  background-image: image-url("kitchen.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 580px;
+  background-color:rgba(255,255,255,0.3);
+  background-blend-mode:lighten;
 }
 // トップページ画像の白いボックス
 .top-message-box {
- position: absolute;
- margin: 0 auto;
- top: 0%;
- left: 20%;
- width: 60%;
- padding-top: 10px;
- max-height: 580px;
+  position: absolute;
+  margin: 0 auto;
+  top: 0%;
+  left: 20%;
+  width: 60%;
+  padding-top: 10px;
+  max-height: 580px;
 }
 // トップページ画像のロゴ
 .message {
- font-family: 'Senobi-Gothic-Regular';
- text-align: center;
- font-size: 70px;
+  font-family: 'Senobi-Gothic-Regular';
+  text-align: center;
+  font-size: 70px;
 }
 .sub-message{
- font-family: 'Senobi-Gothic-Regular';
- text-align: center;
- font-size: 27px;
+  font-family: 'Senobi-Gothic-Regular';
+  text-align: center;
+  font-size: 27px;
 }
 // トップメッセージ下のボタン
 .top-btn {
- text-align: center;
+  text-align: center;
 }
 
 // topスライダーのボタン
 .slick-next {
- right: 35px !important;
- z-index: 100;
+  right: 35px !important;
+  z-index: 100;
  }
 .slick-prev {
- left: 10px !important;
- z-index: 100;
+  left: 10px !important;
+  z-index: 100;
  }
 // スライダー画像
  .slider-img {
@@ -116,23 +116,23 @@ body {
 
 // 各ページ背景画像
 #about, #sessions, #registrations {
- background-position: center;
- background-size: cover;
- width: 100%;
- height: 86vh;
- background-color:rgba(255,255,255,0.2);
- background-blend-mode:lighten;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 70vh;
+  max-height: 95vh;
+  background-color:rgba(255,255,255,0.2);
+  background-blend-mode:lighten;
 }
 #about {
- background-image: image-url("vege.jpg");
-
+  background-image: image-url("vege.jpg");
   font-size: 17px;
 }
 #sessions {
- background-image: image-url("knife-leaf.jpg");
+  background-image: image-url("knife-leaf.jpg");
 }
 #registrations {
- background-image: image-url("knife-tomato.jpg");
+  background-image: image-url("knife-tomato.jpg");
 }
 
 // ベージュボタン
@@ -244,37 +244,37 @@ body {
 }
  // recipeの_indexメイン画像
 .index-img {
- object-fit: cover;
- height: 200px;
- width: 269px;
+  object-fit: cover;
+  height: 200px;
+  width: 269px;
 }
 // userフォロー一覧
 .user-img-card {
- object-fit: cover;
- height: 240px;
- width: 240px;
- margin: 0 auto ;
+  object-fit: cover;
+  height: 240px;
+  width: 240px;
+  margin: 0 auto ;
 }
 
 // タイムラインrecipe画像
 .timeline-img {
- object-fit: cover;
- height: 250px;
- width: 318px;
+  object-fit: cover;
+  height: 250px;
+  width: 318px;
 }
 
 // 手順の画像
 .step-img {
- object-fit: cover;
- height: 80px;
- width: 100px;
+  object-fit: cover;
+  height: 80px;
+  width: 100px;
 }
 .step-prev {
- object-fit: cover;
- height: 80px;
- width: 100px;
- cursor: pointer;
- opacity: 0.8;
+  object-fit: cover;
+  height: 80px;
+  width: 100px;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
  // ページネーション
@@ -292,12 +292,12 @@ body {
   border-radius: 50%;
 }
 
+// エラー表示
 #errors, #error_explanation {
- color: #e04a04;
+  color: #e04a04;
 }
-
 #alert, #notice {
- color: #e04a04;
+  color: #e04a04;
  font-weight: bold;
 }
 
