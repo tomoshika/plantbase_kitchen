@@ -3,7 +3,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
     @steps = @recipe.steps.build
     @foods = @recipe.foods.build
-    # @user = current_user
   end
 
   def create

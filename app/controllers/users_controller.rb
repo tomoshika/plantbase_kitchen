@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :redirect_root, only: :timeline
 
   def timeline
-    @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids]).page(params[:page]).reverse_order
+    @recipes = Recipe.where(user_id: [current_user.id, *current_user.following_ids]).page(params[:page]).reverse_order.per(8)
     @like = current_user.likes.find_by(recipe_id: @recipes.ids)
     @tags = Hashtag.all
   end
