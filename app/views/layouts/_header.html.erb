@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
-            <li class="nav-item active"><%= link_to 'タイムライン', users_timeline_path, class: "btn ml-6 text-light nav-link" %></li>
+            <li class="nav-item active"><%= link_to 'タイムライ', users_timeline_path, class: "btn ml-6 text-light nav-link" %></li>
             <li class="nav-item"><%= link_to 'レシピ一覧', recipes_path, class: "btn ml-6 text-light nav-link" %></li>
             <li class="nav-item"><%= link_to 'お気に入り', likes_user_path(current_user), class: "btn ml-6 text-light nav-link" %></li>
             <li class="nav-item"><%= link_to 'マイページ', user_path(current_user), class: "btn ml-6 text-light nav-link" %></li>
