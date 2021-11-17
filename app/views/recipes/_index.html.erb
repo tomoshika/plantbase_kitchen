@@ -8,7 +8,7 @@
 
       <div class="card-title mt-3 ml-3">
         <%= link_to recipe_path(recipe.id), class:"text-dark" do %>
-          <h6><strong><%= recipe.title %></strong></h6>
+          <strong><%= recipe.title.truncate(15) %></strong>
         <% end %>
       </div>
 

@@ -91,6 +91,9 @@ section {
   max-width: 186px;
   font-size: 1px;
 }
+.card-title {
+  font-size: 12px;
+}
  // recipeの_indexメイン画像
 .index-img {
   height: 120px;
@@ -108,12 +111,13 @@ section {
 }
 // users/show
 .user-img {
-  height: 140px;
-  width: 140px;
+  height: 270px;
+  width: 270px;
 }
 // users/show
 .user-info {
-  font-size: 8px;
+  font-size: 13px;
+  padding-left: 70px;
  }
 
 // タイムラインrecipe画像
