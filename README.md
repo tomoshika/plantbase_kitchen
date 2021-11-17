@@ -15,7 +15,7 @@
 - 20代以上のプラントベースの食材や料理に興味のある方
 
 ## 設計書
-- [ER図]
+- [ER図]  
   <https://app.diagrams.net/#G1moloWgiiD62_ympmSOI8onvRa7TxzP9V>
 - [テーブル定義書]
   <https://docs.google.com/spreadsheets/d/1y2hPcy8XuEH4nZaLlh4359SLnXAjKYO7ZBt7aQyw1hc/edit#gid=1373217982>
