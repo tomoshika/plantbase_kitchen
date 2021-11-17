@@ -3,9 +3,9 @@
     <div class="card mx-auto mt-4 shadow-lg">
       <div class="col">
         <%= link_to user_path(user), class: "text-dark" do %>
-          <div class="card-img-top mt-2"><%= attachment_image_tag user, :image, fallback: "no_image.jpg", class: "user-img-card rounded-circle" %></div>
-          <div class="card-body">
-            <h5 class="card-title"><strong><%= user.name %></strong></h5>
+          <div class="card-img-top mt-2"><%= attachment_image_tag user, :image, fallback: "no_image.jpg", class: "user-img-card" %></div>
+          <div class="col">
+            <h5 class="card-title mt-3"><strong><%= user.name %></strong></h5>
             <p><%= user.followings.count %> フォロー | <%=user.followers.count %> フォロワー</p>
             <p>レシピ投稿数：<%= user.recipes.count %></p>
           </div>

@@ -45,6 +45,9 @@ section {
 .about-message {
   padding-top: 10px;
 }
+.search-logo {
+ font-size: 25px;
+}
 
 main {
   min-height: 84vh;
@@ -194,6 +197,8 @@ body {
  .user-img {
   border-radius: 50%;
   object-fit: cover;
+  height: 300px;
+  width: 300px;
  }
 // recipes/index
  .user-icon {
@@ -231,6 +236,10 @@ body {
   object-fit: cover;
   cursor: pointer;
   opacity: 0.8;
+ }
+ // users/show
+ .user-info {
+  font-size: 15px;
  }
 
 // 各一覧のcard

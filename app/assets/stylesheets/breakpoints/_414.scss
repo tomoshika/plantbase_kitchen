@@ -87,16 +87,12 @@ section {
 
 // 各一覧のcard
 .card {
-  margin: 0 auto ;
   height: 280px;
   max-width: 186px;
-  display: flex;
-  flex-wrap: wrap;
   font-size: 1px;
 }
  // recipeの_indexメイン画像
 .index-img {
-  object-fit: cover;
   height: 120px;
   width: 184px;
 }
@@ -104,15 +100,21 @@ section {
 .user-icon {
   height: 30px;
   width: 30px;
-  object-fit: cover;
-  border-radius: 50%;
  }
 // フォローuser一覧のimage
 .user-img-card {
-  object-fit: cover;
   height: 143px;
   width: 143px;
 }
+// users/show
+.user-img {
+  height: 140px;
+  width: 140px;
+}
+// users/show
+.user-info {
+  font-size: 8px;
+ }
 
 footer {
   height: 25px;

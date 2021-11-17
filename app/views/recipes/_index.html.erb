@@ -1,7 +1,7 @@
 <div class="row card-list-container">
   <% recipes.each do |recipe| %>
     <div class="card mx-auto mt-4 shadow-lg" style="width: 20rem;">
-      
+
       <%= link_to recipe_path(recipe.id) do %>
         <%= attachment_image_tag recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", class: "card-img-top index-img" %>
       <% end %>
@@ -11,7 +11,7 @@
           <h6><strong><%= recipe.title %></strong></h6>
         <% end %>
       </div>
-      
+
       <div class="row">
         <div class="col-4 ml-3">
           <%= attachment_image_tag recipe.user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon rounded-circle"; %></br>
@@ -24,15 +24,18 @@
               <div class="ml-2" id="like<%= recipe.id %>" >
                 <%= render 'likes/likes_btn', recipe: recipe, like: like %>
               </div>
-              <div class="ml-2">
-                <i class="far fa-comment"></i> <%= recipe.comments.count %>
-              </div>
+            <% else %>
+              <div class="fas fa-heart btn-like ml-2 mr-1"></div>
+              <%= recipe.likes.count %>
             <% end %>
+            <div class="ml-2">
+              <i class="far fa-comment"></i> <%= recipe.comments.count %>
+            </div>
           </div>
           <p class="mt-4"><%= render_with_hashtags(recipe.memo.truncate(30)) %></p>
         </div>
       </div>
-      
+
     </div>
   <% end %>
 </div>

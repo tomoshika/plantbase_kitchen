@@ -48,5 +48,25 @@ main {
 }
 .slider-nav {
   font-size: 20px;
+}
 
+// 各一覧のcard
+.card {
+  height: 400px;
+  max-width: 320px;
+}
+ // recipeの_indexメイン画像
+.index-img {
+  height: 210px;
+  width: 319px;
+}
+//recipeのcardのuserアイコン
+.user-icon {
+  height: 50px;
+  width: 50px;
+ }
+// フォローuser一覧のimage
+.user-img-card {
+  height: 240px;
+  width: 240px;
 }
