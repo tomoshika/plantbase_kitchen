@@ -260,9 +260,10 @@ body {
 // userフォロー一覧
 .user-img-card {
   object-fit: cover;
+  border-radius: 50%;
   height: 240px;
   width: 240px;
-  margin: 0 auto ;
+  margin: 0 auto;
 }
 
 // タイムラインrecipe画像
