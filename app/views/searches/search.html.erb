@@ -7,7 +7,7 @@
       <% end %>
     </div>
     <div class="col-lg-9 col-md-12">
-      <section><h3>"<%= @word %>"の検索結果</h3></section>
+      <section>"<%= @word %>"の検索結果</section>
       <% if @range == '1' %>
         <%= render "recipes/index", recipes: @recipes %>
       <% else %>

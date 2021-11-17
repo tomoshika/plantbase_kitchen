@@ -32,7 +32,6 @@
 - JSライブラリ：Bootstrap
 - IDE：Cloud9
 
-
 ## 使用素材
 - ぱくたそ
   <https://morguefile.com/photos/morguefile/1/pop>

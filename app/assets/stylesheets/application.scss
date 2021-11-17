@@ -135,7 +135,7 @@ body {
   background-image: image-url("knife-tomato.jpg");
 }
 
-// ベージュボタン
+ // ベージュボタン
  .btn-1 {
   box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
   background-color: #e3dad3;
@@ -167,16 +167,16 @@ body {
  }
 
  // 濃いオレンジボタン
-.btn-3 {
+ .btn-3 {
   box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
   background-color: #d17711;
   border-radius: 100vh;
   color: #faf8f0;
-}
-.btn-3:hover {
+ }
+ .btn-3:hover {
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
  }
-.btn-3:active {
+ .btn-3:active {
   box-shadow: none;
   position: relative;
   top: 2px;
@@ -307,11 +307,11 @@ body {
   opacity: 0.9;
  }
 
-  // レスポンシブ（スマホサイズ）
- @media screen and (max-width: 425px) {
-  @import "breakpoints/425";
- }
- // レスポンシブ（ipadサイズ）
+  // レスポンシブ（ipadサイズ）
  @media screen and (max-width: 768px) {
- @import "breakpoints/768";
+  @import "breakpoints/768";
 }
+  // レスポンシブ（スマホサイズ）
+ @media screen and (max-width: 414px) {
+  @import "breakpoints/414";
+ }

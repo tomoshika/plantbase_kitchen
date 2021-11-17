@@ -18,6 +18,10 @@ main {
   height:auto !important;
 }
 
+section {
+  font-size: 25px;
+}
+
 // topページ
 .top-img {
   width: 100%;
@@ -53,9 +57,8 @@ main {
 
 // トップページスライダー
 .slider-img {
-  height: 160px;
-  width: 160px;
-  object-fit: cover;
+  height: 175px;
+  width: 175px;
  }
 .slider-nav {
   font-size: 17px;
