@@ -15,11 +15,11 @@
 - 20代以上のプラントベースの食材や料理に興味のある方
 
 ## 設計書
-- [ER図]
+- [ER図]  
   <https://app.diagrams.net/#G1moloWgiiD62_ympmSOI8onvRa7TxzP9V>
-- [テーブル定義書]
+- [テーブル定義書]  
   <https://docs.google.com/spreadsheets/d/1y2hPcy8XuEH4nZaLlh4359SLnXAjKYO7ZBt7aQyw1hc/edit#gid=1373217982>
-- [アプリケーション詳細設計]
+- [アプリケーション詳細設計]  
   <https://docs.google.com/spreadsheets/d/19YiwUSe9UBk5i3skvUVWLCBUzEYNBEeySLp8DSpqKx0/edit#gid=507643061>
 
 ## チャレンジ要素一覧
@@ -34,10 +34,10 @@
 
 ## 使用素材
 - ぱくたそ
-  <https://morguefile.com/photos/morguefile/1/pop>
+  <  https://morguefile.com/photos/morguefile/1/pop>
 - O-DAN
-  <https://o-dan.net/ja/>
+  <  https://o-dan.net/ja/>
 - illust AC
-  <https://www.ac-illust.com/>
+  <  https://www.ac-illust.com/>
 - FONT FREE
-  <https://fontfree.me/>
+  <  https://fontfree.me/>
