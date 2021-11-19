@@ -9,7 +9,7 @@
         <%= comment.recipe_comment %>
       </div>
       <% if comment.user == current_user %>
-        <div class="col-1">
+        <div class="col-2">
           <%= link_to "", recipe_comment_path(recipe, comment), method: :delete, remote: true, class: "btn btn-sm btn-1 fas fa-trash-alt" %>
         </div>
       <% end %>
