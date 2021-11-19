@@ -10,7 +10,7 @@
 <div class="mb-3">
   <section class="search-logo"><i class="fas fa-hashtag"></i> タグ検索</section>
   <% tags.each do |tag|%>
-    <%= link_to "#"+tag.hashname, hashtag_search_path(tag.hashname), {class: "btn btn-1 mb-2"} %>
+    <%= link_to "#"+tag.hashname, hashtag_search_path(tag.hashname), {class: "btn btn-1 mb-1"} %>
   <% end %>
 </div>
 
