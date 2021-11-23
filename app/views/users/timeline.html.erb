@@ -21,7 +21,7 @@
             <div class="row">
               <div class="col mt-2">
                 <h5><strong><%= link_to recipe.title, recipe_path(recipe), class: "text-dark" %></strong></h5>
-                <p><%= render_with_hashtags(recipe.memo.truncate(63)) %></p>
+                <p><%= render_with_hashtags(recipe.memo.truncate(62)) %></p>
               </div>
             </div>
             <div class="row mt-5">
