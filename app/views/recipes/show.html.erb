@@ -7,7 +7,7 @@
           <p id="notice"><%= notice %></p>
           <div><%= attachment_image_tag @recipe, :recipe_image, format: 'jpeg', fallback: "no_image.jpg", id: "img"  %></div>
           <% if @recipe.user == current_user %>
-            <%= link_to 'レシピを編集する', edit_recipe_path(@recipe), class: "btn btn-1 mt-3 offset-3" %></br>
+            <%= link_to 'レシピを編集する', edit_recipe_path(@recipe), class: "btn btn-1 mt-3 offset-3" %><br>
             <%= link_to 'レシピを削除する', recipe_path(@recipe.id), method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-1 mt-2 mb-2 offset-3" %>
           <% end %>
         </div>
