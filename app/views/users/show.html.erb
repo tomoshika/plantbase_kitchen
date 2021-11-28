@@ -26,7 +26,7 @@
               <%=@user.followers.count %> フォロワー
             <% end %>
           </div>
-          <div class="row mb-3">レシピ投稿数：<%= @user.recipes.count %></div>
+          <div class="row mb-3">レシピ投稿：<%= @user.recipes.count %>件</div>
           <div class="row mb-1"><%= @user.introduction %></div>
           <div class="row mt-2">
             <% if user_signed_in? %>
