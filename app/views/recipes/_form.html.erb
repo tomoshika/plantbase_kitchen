@@ -48,7 +48,7 @@
           </div>
         </div>
         <div class="form-group">
-          <%= f.label :food, "手順" %>
+          <%= f.label :food, "作り方" %>
           <%= f.fields_for :steps do |t| %>
             <%= render "recipes/step_fields", f: t %>
           <% end %>
