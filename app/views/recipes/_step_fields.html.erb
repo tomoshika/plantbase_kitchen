@@ -9,7 +9,7 @@
       <%= link_to_remove_association "", f, class: "fas fa-trash-alt btn" %>
     </div>
 
-    <div class="col-3">
+    <div class="col">
       <label>
         <%= f.attachment_field :process_image, class: 'step_field hoge', style: 'display:none;' %>
         <%= attachment_image_tag f.object, :process_image, fallback: 'no_image.jpg', class: 'img-thumbnail step-prev' %>
