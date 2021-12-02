@@ -1,7 +1,7 @@
   <%= form_with(model: recipe, local: true) do |f| %>
     <div class="row mt-1">
 
-      <div class="col-lg-5 col-md-12">
+      <div class="col-lg-5 col-md-10">
         <%= f.attachment_field :recipe_image, class: 'img_field', style: 'display:none;' %>
         <%= attachment_image_tag recipe, :recipe_image, fallback: 'no_image.jpg', onClick: "$('.img_field').click()", class: 'img-thumbnail img_preview' %>
         <script>
