@@ -20,7 +20,7 @@
                 <%= render 'likes/likes_btn', recipe: @recipe, like: @like %>
               <% end %>
             </div>
-            <div class="col-"></div>
+            <div class="col-1"></div>
             <div class="col-2"><%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon-mini" %></div>
             <div class="col-4 mt-3"><%= link_to @recipe.user.name, user_path(@recipe.user), class: "text-dark" %></div>
           </div>
