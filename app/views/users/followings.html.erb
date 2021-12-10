@@ -5,7 +5,7 @@
       <% if @user == current_user %>
         <%= link_to 'マイページに戻る', user_path(@user), class: "btn btn-1 mt-3 ml-1" %>
       <% else %>
-        <%= link_to user_path(@user), class: "btn btn-1 mt-3 ml-1" do %>
+        <%= link_to user_path(@user), class: "btn btn-1 mt-3 ml-2" do %>
           <%= @user.name %>さんのページに戻る
         <% end %>
       <% end %>
