@@ -38,7 +38,7 @@
               </div>
               <%= link_to user_path(recipe.user), class: "text-dark ml-5" do %>
                 <div class="col-3"><%= attachment_image_tag recipe.user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon" %></div>
-                <div class="col-3"><%= recipe.user.name %></div>
+                <div class="col-"><%= recipe.user.name %></div>
               <% end %>
             </div>
           </div>
