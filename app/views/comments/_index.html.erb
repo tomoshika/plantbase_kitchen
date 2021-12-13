@@ -3,7 +3,7 @@
     <div class="row pt-2 border-bottom">
       <div class="col-2">
         <%= attachment_image_tag comment.user, :image, format: 'jpeg', fallback: "no_image.jpg", class: "user-icon-mini" %><br>
-        <%= link_to comment.user.name, user_path(comment.user), class: "" %>
+        <%= link_to comment.user.name, user_path(comment.user), class: "text-dark" %>
       </div>
       <div class="col-6">
         <%= comment.recipe_comment %>
